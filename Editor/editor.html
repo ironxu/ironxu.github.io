@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Lua Syntax | Introduction</title>
+        <title>Editor | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../Lua/LuaRegularExpression.html" />
+    <link rel="next" href="../Editor/tmux.html" />
     
     
-    <link rel="prev" href="../Lua/Lua.html" />
+    <link rel="prev" href="../Git/Git.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Mon Jun 29 2015 09:38:35 GMT+0800 (CST)">
+    <div class="book" data-level="8" data-basepath=".." data-revision="Mon Jun 29 2015 09:38:35 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -97,7 +97,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="Lua/LuaSyntax.html">
+        <li class="chapter " data-level="2.1" data-path="Lua/LuaSyntax.html">
             
                 
                     <a href="../Lua/LuaSyntax.html">
@@ -214,7 +214,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="Editor/editor.html">
+        <li class="chapter active" data-level="8" data-path="Editor/editor.html">
             
                 
                     <a href="../Editor/editor.html">
@@ -406,156 +406,21 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="%E8%AF%AD%E6%B3%95">&#x8BED;&#x6CD5;</h2>
-<h3 id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
-<h4 id="nil-%E7%A9%BA%E7%B1%BB%E5%9E%8B">nil &#x7A7A;&#x7C7B;&#x578B;</h4>
-<pre><code>--nil type &#x6CE8;&#x91CA;  
-username = nil --&#x5B9A;&#x4E49;username&#x4E3A;nil&#x7C7B;&#x578B;  
---if else&#x5224;&#x65AD;  
-if (username == nil) then   
-    print(&quot;this is nil&quot;);  
-else  
-    print(&quot;this is not nil&quot;);  
-end
-</code></pre><h4 id="boolean">boolean</h4>
-<pre><code>--boolean  
-isTrue = true  
-print(isTrue)
-</code></pre><h4 id="number">number</h4>
-<pre><code>--number  
-a = 100  
-b = 100.5  
-print(a + b)
-</code></pre><h4 id="string">string</h4>
-<pre><code>--String  
-str = &quot;hello lua&quot;  
-print(str)         
-str2 = &quot; haha&quot;  
-print(str..str2)
-</code></pre><h4 id="function">function</h4>
-<pre><code>--function         
-function parse(a, b)  
-    local c = 0.5;  
-    return (a + b) * c  
-end                         
-print(parse(10,20))         
-print(parse(5, 11.2))
-</code></pre><h4 id="table">table</h4>
-<pre><code>--function                         
-function parse(a, b)               
-    local c = 0.5;             
-    return (a + b) * c         
-end                         
-print(parse(10,20))         
-print(parse(5, 11.2))       
+                        <h1 id="%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x914D;&#x7F6E;</h1>
+<h2 id="tmux">Tmux</h2>
+<p>&#x5BB9;&#x5668;</p>
+<h2 id="vim">Vim</h2>
+<p>&#x7F16;&#x8F91;&#x5668;</p>
+<h3 id="%E6%8F%92%E4%BB%B6">&#x63D2;&#x4EF6;</h3>
+<h2 id="language-plugin">language plugin</h2>
+<h3 id="php">php</h3>
+<p>pear</p>
+<h3 id="lua">lua</h3>
+<p>luarock</p>
+<h3 id="python">python</h3>
+<p>pip</p>
+<h3 id="r">R</h3>
 
---table                     
-userTable = {}              
-userTable.username = &quot;initphp&quot;  
-userTable.age = 20              
-userTable.money = 100           
-userTable.info = {}             
-userTable.info.height = 172     
-userTable.info.func = parse     
-print(&quot;username:&quot; .. userTable.username .. &quot;;userage:&quot; .. userTable.age)  
-print(&quot;userInfo:&quot; .. userTable.info.height)                               
-print(&quot;function :&quot; .. parse(10,20))
-</code></pre><h4 id="userdata">userdata</h4>
-<p>userdata &#x7C7B;&#x578B;&#x7528;&#x6765;&#x5C06;&#x4EFB;&#x610F; C &#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5728; Lua &#x53D8;&#x91CF;&#x4E2D;</p>
-<h4 id="thread">thread</h4>
-<p>&#x7528;&#x4E8E;&#x5B9E;&#x73B0; coroutine &#xFF08;&#x534F;&#x540C;&#x4F8B;&#x7A0B;&#xFF09;</p>
-<h3 id="%E7%BB%93%E6%9E%84">&#x7ED3;&#x6784;</h3>
-<h4 id="%E5%87%BD%E6%95%B0">&#x51FD;&#x6570;</h4>
-<pre><code>-- &#x51FD;&#x6570;
-function fact( n )
-    if n == 0 then
-        return 1
-    else
-        return n * fact( n-1 )
-    end
-end
-
-print(&apos;Enter a number:&apos;)
-a = io.read()
-print(fact(a))
-</code></pre><h4 id="%E5%A4%9A%E9%87%8D%E8%B5%8B%E5%80%BC">&#x591A;&#x91CD;&#x8D4B;&#x503C;</h4>
-<pre><code>a, b = 10, 20
-print(&quot;a:&quot;..a..&quot;b:&quot;..b)
-</code></pre><h4 id="if">IF</h4>
-<pre><code>val = 2000
-if val == 100 then
-    print(&apos;val==100&apos;)
-elseif val == 200 then
-    print(&apos;val==200&apos;)
-else 
-    print(&apos;val =&apos;..val)
-end
-</code></pre><h4 id="for">FOR</h4>
-<pre><code>for i=1, 10, 1
-do
-    print(&apos;test&apos;..i)
-end
-</code></pre><h4 id="while">while</h4>
-<pre><code>count = 10
-while count &gt; 0
-do
-    print(&apos;while: &apos;..count)
-    count = count -1
-end
-</code></pre><h4 id="repeat">repeat</h4>
-<pre><code>count = 10
-repeat
-    print(&apos;repeat: &apos;..count)
-    count = count - 1
-until count &lt; 1
-</code></pre><h3 id="%E8%BF%90%E7%AE%97">&#x8FD0;&#x7B97;</h3>
-<h4 id="and-or">AND OR</h4>
-<pre><code>-- and or
-a = 10
-b = 20
-print(a and b)
-print(a or b)
-</code></pre><h4 id="-%E5%8F%96%E9%95%BF%E5%BA%A6"># &#x53D6;&#x957F;&#x5EA6;</h4>
-<pre><code>--#
-str = &apos;hello&apos;
-print(&apos;Len: &apos;.. $str)
-</code></pre><h4 id="local">local</h4>
-<pre><code>a = 100
-c =50
-function add(b)
-    local c = 100   --&#x5C40;&#x90E8;
-    print(a+b+c)
-end
-add(20)
-</code></pre><h3 id="%E6%8D%A2%E8%A1%8C">&#x6362;&#x884C;</h3>
-<p>Lua &#x8BED;&#x53E5;&#x4E0D;&#x9700;&#x8981;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x5E76;&#x4E14;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6362;&#x884C;&#x4E0D;&#x8D77;&#x4EFB;&#x4F55;&#x4F5C;&#x7528;</p>
-<h2 id="%E8%A7%A3%E9%87%8A%E5%99%A8%E5%8F%82%E6%95%B0">&#x89E3;&#x91CA;&#x5668;&#x53C2;&#x6570;</h2>
-<p>lua -i prog &#x8FD0;&#x884C;&#x540E;&#x8FDB;&#x5165;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;</p>
-<p>dofile(&apos;prog.lua&apos;) &#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x4E2D;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</p>
-<h2 id="%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95%E5%BA%93">&#x57FA;&#x672C;&#x65B9;&#x6CD5;&#x5E93;</h2>
-<p>&#x65AD;&#x8A00; <code>assert(v[,message])</code></p>
-<pre><code>local a = &apos;hello&apos;
-if (assert(a)) then
-    print(&apos;hello&apos;)
-end
-</code></pre><p>&#x5783;&#x573E;&#x6536;&#x96C6;&#x63A5;&#x53E3;</p>
-<p>collectgarbage(opt [,arg])</p>
-<pre><code>local a = &apos;hello&apos;
-if (assert(a)) then
-    print(&apos;hello&apos;)
-end
-print(collectgarbage(&apos;count&apos;))
-</code></pre><p>&#x9519;&#x8BEF;&#x5904;&#x7406; <code>error(message [,level])</code></p>
-<h2 id="io">IO</h2>
-<h3 id="%E7%AE%80%E5%8D%95io">&#x7B80;&#x5355;IO</h3>
-<pre><code>io.input(&apos;./FlightList.html&apos;)   --&#x6539;&#x53D8;stdin
-t = io.read(&quot;*all&quot;) --&#x8BFB;&#x53D6;&#x6240;&#x6709;&#x6587;&#x4EF6;
-io.write(t)     --&#x8F93;&#x51FA;&#x5230;stdout
-</code></pre><h3 id="%E5%AE%8C%E6%95%B4io">&#x5B8C;&#x6574;IO</h3>
-<pre><code>local f = io.open(filename, &quot;r&quot;)
-local t = f:read(&quot;*all&quot;)
-f:close()
-</code></pre>
                     
                     </section>
                 
@@ -565,10 +430,10 @@ f:close()
         </div>
 
         
-        <a href="../Lua/Lua.html" class="navigation navigation-prev " aria-label="Previous page: Lua"><i class="fa fa-angle-left"></i></a>
+        <a href="../Git/Git.html" class="navigation navigation-prev " aria-label="Previous page: Git"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Lua/LuaRegularExpression.html" class="navigation navigation-next " aria-label="Next page: Lua RegularExpression"><i class="fa fa-angle-right"></i></a>
+        <a href="../Editor/tmux.html" class="navigation navigation-next " aria-label="Next page: Tmux"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
