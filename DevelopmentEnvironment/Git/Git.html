@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="6.2" data-basepath="../.." data-revision="Tue Jun 30 2015 18:27:28 GMT+0800 (CST)">
+    <div class="book" data-level="6.2" data-basepath="../.." data-revision="Tue Jun 30 2015 19:28:55 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -654,6 +654,26 @@ git stash apply stash@{0} &#x6062;&#x590D;&#x6307;&#x5B9A;&#x7684;&#x5DE5;&#x4F5
 <h3 id="%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E6%A0%87%E7%AD%BE">&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x6807;&#x7B7E;</h3>
 <p><code>git tag -d v0.9</code> &#x5148;&#x5220;&#x9664;&#x672C;&#x5730;&#x6807;&#x7B7E;</p>
 <p><code>git push origin :refs/tags/v0.9</code> &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</p>
+<h2 id="github">GitHub</h2>
+<h2 id="%E8%87%AA%E5%AE%9A%E4%B9%89">&#x81EA;&#x5B9A;&#x4E49;</h2>
+<p><code>git config --global color.ui true</code></p>
+<h3 id="-gitignore">.gitignore</h3>
+<p><a href="https://github.com/github/gitignore" target="_blank">github ignore</a></p>
+<p>&#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x539F;&#x5219;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6587;&#x4EF6;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;</li>
+<li>&#x654F;&#x611F;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="%E5%88%AB%E5%90%8D">&#x522B;&#x540D;</h3>
+<pre><code>git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.unstage &apos;reset HEAD&apos;
+git config --global alias.last &apos;log -1&apos;
+git config --global alias.lg &quot;log --color --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit&quot;
+</code></pre><p>global &#x914D;&#x7F6E;&#x6587;&#x4EF6; ~/.gitconfig</p>
 
                     
                     </section>
