@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="6.3" data-basepath=".." data-revision="Fri Jul 03 2015 18:57:56 GMT+0800 (CST)">
+    <div class="book" data-level="6.3" data-basepath=".." data-revision="Sat Jul 04 2015 18:05:49 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -677,13 +677,51 @@
 <li>&#x8BE6;&#x7EC6;&#x6B65;&#x9AA4;&#x8BF7;&#x53C2;&#x89C1; Gitbook&#x4F7F;&#x7528;&#x5165;&#x95E8;</li>
 <li><a href="https://github.com/codepiano/gitbook" target="_blank">&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x53C2;&#x8003;</a></li>
 </ul>
-<h2 id="%E6%8F%92%E4%BB%B6">&#x63D2;&#x4EF6;</h2>
+<h2 id="%E4%BD%BF%E7%94%A8%E7%AD%96%E7%95%A5">&#x4F7F;&#x7528;&#x7B56;&#x7565;</h2>
+<p>&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;Git&#x4ED3;&#x5E93;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x6E90;&#x7801;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x9759;&#x6001;&#x9875;&#x9762;</p>
+<p>&#x4FDD;&#x5B58;&#x5EFA;&#x53F0;&#x9875;&#x9762;&#x7684;Github&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Github Page&#x4F5C;&#x4E3A;<a href="http://hubeixugang.github.io/" target="_blank">&#x53D1;&#x5E03;</a>&#x7A7A;&#x95F4;</p>
+<p>&#x5177;&#x4F53;&#x642D;&#x5EFA;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x7F51;&#x4E0A;&#x6559;&#x7A0B;&#xFF0C;&#x642D;&#x5EFA;&#x540E;&#x7684;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x672C;&#x6587;&#x7684;<a href="https://github.com/hubeixugang/Accumulate" target="_blank">Github</a></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x7F16;&#x8BD1;&#x540E;&#x590D;&#x5236;&#x811A;&#x672C;</p>
+<pre><code>#!/bin/bash
+echo &apos;build gitbook start...&apos;
+gitbook build
+echo &apos;copy static html to githuo.io...&apos;
+cp -u -r _book/* /home/vagrant/git/hubeixugang.github.io
+echo &apos;copy done&apos;
+</code></pre><h2 id="%E6%8F%92%E4%BB%B6">&#x63D2;&#x4EF6;</h2>
 <ul>
 <li><a href="http://plugins.gitbook.com/" target="_blank">plugin</a> &#x63D2;&#x4EF6;&#x5B98;&#x7F51;</li>
 <li><a href="https://www.npmjs.com/package/gitbook-plugin-collapsible-menu" target="_blank">collapsible</a> &#x76EE;&#x5F55;&#x5217;&#x8868;&#x6298;&#x53E0;</li>
 <li><a href="https://github.com/boycgit/gitbook-plugin-gtoc" target="_blank">gtoc</a> &#x9875;&#x9762;&#x76EE;&#x5F55;</li>
 </ul>
-
+<h2 id="book-json">book.json</h2>
+<pre><code>{
+    &quot;title&quot;:&quot;Outer Brain Manual&quot;,
+    &quot;description&quot;:&quot;blog of xg&quot;,
+    &quot;plugins&quot;: [&quot;collapsible-menu&quot;, &quot;gtoc&quot;], //&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;
+    &quot;links&quot;: {
+        &quot;contribute&quot;: false,
+        &quot;sidebar&quot;: { //&#x5DE6;&#x8FB9;&#x680F;&#x9876;&#x90E8;&#x6DFB;&#x52A0;&#x94FE;&#x63A5;
+            &quot;About Author&quot;:&quot;https://github.com/hubeixugang&quot;,
+            &quot;Questions and Issues&quot;:&quot;https://github.com/hubeixugang/Accumulate/issues&quot;,
+            &quot;Eidt and Contribute&quot;:&quot;https://github.com/hubeixugang/Accumulate&quot;
+        },
+        &quot;tail&quot;: { //&#x5DE6;&#x8FB9;&#x680F;&#x5E95;&#x90E8;&#x6DFB;&#x52A0;&#x94FE;&#x63A5;,&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x56DE;&#x4E8B;,&#x6CA1;&#x6709;&#x6548;&#x679C;
+            &quot;Xu Gang&quot;:&quot;mailto:hubeixugang@163.com&quot;
+        },
+        &quot;gitbook&quot;:&quot;false&quot;,
+        &quot;sharing&quot;:{
+             &quot;google&quot;: null,
+             &quot;facebook&quot;: null,
+             &quot;twitter&quot;: null,
+             &quot;weibo&quot;: null,
+             &quot;qrcode&quot;: true,
+             &quot;all&quot;: null
+        }
+    },
+    &quot;gitbook&quot;: &quot;&gt;=2.0.0&quot;
+}
+</code></pre>
                     
                     </section>
                 
