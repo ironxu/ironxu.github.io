@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="6.1.2" data-basepath="../.." data-revision="Mon Jul 06 2015 19:05:46 GMT+0800 (CST)">
+    <div class="book" data-level="6.1.2" data-basepath="../.." data-revision="Sun Jul 12 2015 21:24:32 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -462,26 +462,20 @@
                 
             
             
-            <ul class="articles">
-                
+        </li>
     
-        <li class="chapter " data-level="6.1.2.1" data-path="DevelopmentEnvironment/Editor/NERDTree.html">
+        <li class="chapter " data-level="6.1.3" data-path="DevelopmentEnvironment/Editor/NERDTree.html">
             
                 
                     <a href="../../DevelopmentEnvironment/Editor/NERDTree.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>6.1.2.1.</b>
+                            <b>6.1.3.</b>
                         
-                        plugin keymap
+                        NERDTree
                     </a>
                 
             
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -502,6 +496,27 @@
                     </a>
                 
             
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="DevelopmentEnvironment/Git/gitstrategy.html">
+            
+                
+                    <a href="../../DevelopmentEnvironment/Git/gitstrategy.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.1.</b>
+                        
+                        GitStrategy
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -682,115 +697,206 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="vim">VIM</h1>
-<h2 id="%E6%8F%92%E4%BB%B6">&#x63D2;&#x4EF6;</h2>
-<h3 id="plugin-lists">plugin lists</h3>
-<ul>
-<li><a href="https://github.com/tpope/vim-pathogen" target="_blank">pathogen &#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;</a></li>
-<li><a href="https://github.com/scrooloose/nerdtree" target="_blank">NERDTree &#x76EE;&#x5F55;&#x7ED3;&#x6784;</a></li>
-<li><a href="https://github.com/wincent/Command-T.git" target="_blank">Command-T &#x6587;&#x4EF6;&#x8DF3;&#x8F6C;</a> (<a href="http://www.justinbar.net/post/install-vim-with-ruby-support-and-command-t-plugin-on-ubuntu" target="_blank">http://www.justinbar.net/post/install-vim-with-ruby-support-and-command-t-plugin-on-ubuntu</a>)</li>
-<li><a href="https://github.com/Lokaltog/vim-powerline" target="_blank">Powerline &#x72B6;&#x6001;&#x680F;</a></li>
-<li><a href="https://github.com/garbas/vim-snipmate" target="_blank">vim-snipmate &#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></li>
-<li><a href="http://www.vim.org/scripts/download_script.php?src_id=4700" target="_blank">visualmark &#x6807;&#x8BB0;</a></li>
-<li><a href="https://github.com/vim-scripts/taglist.vim" target="_blank">taglist &#x4EE3;&#x7801;&#x7ED3;&#x6784;</a></li>
-<li><a href="https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation" target="_blank">YouCompleteMe &#x8865;&#x5168;</a></li>
-</ul>
-<h3 id="pathogen-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85">pathogen &#x63D2;&#x4EF6;&#x5B89;&#x88C5;</h3>
-<pre><code>cd ~/.vim/bundle
-git clone git_path_url
-</code></pre><h2 id="%E5%88%86%E5%B1%8F">&#x5206;&#x5C4F;</h2>
-<h3 id="%E5%9E%82%E7%9B%B4%E5%88%86%E5%B1%8F">&#x5782;&#x76F4;&#x5206;&#x5C4F;</h3>
-<p><code>vim -On file1 file2...</code> &#x542F;&#x52A8;&#x65F6;&#x5206;&#x5C4F;</p>
-<p><code>o</code> &#x662F;&#x5B57;&#x6BCD;o</p>
-<p><code>n</code> &#x662F;&#x6570;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x5206;&#x6210;&#x51E0;&#x5C4F;</p>
-<p><code>ctrl+w v</code> &#x5DE6;&#x53F3;&#x5206;&#x9694;&#x5F53;&#x524D;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</p>
-<p><code>:vsp filename</code> &#x6253;&#x5F00;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5DE6;&#x53F3;&#x5206;&#x9694;</p>
-<h3 id="%E6%B0%B4%E5%B9%B3">&#x6C34;&#x5E73;</h3>
-<p><code>vim -on file1 file2...</code> &#x542F;&#x52A8;&#x65F6;&#x5206;&#x5C4F;</p>
-<p><code>ctrl+w s</code> &#x4E0A;&#x4E0B;&#x5206;&#x9694;&#xFF0C;&#x5F53;&#x524D;&#x6587;&#x4EF6;</p>
-<p><code>:sp filename</code> &#x6253;&#x5F00;&#x65B0;&#x6587;&#x4EF6;,&#x4E0A;&#x4E0B;&#x5206;&#x9694;</p>
-<h3 id="%E5%85%B3%E9%97%AD%E5%88%86%E5%B1%8F">&#x5173;&#x95ED;&#x5206;&#x5C4F;</h3>
-<p><code>ctrl+w c</code>
-<code>ctrl+w q</code></p>
-<h3 id="%E7%A7%BB%E5%8A%A8%E5%85%89%E6%A0%87">&#x79FB;&#x52A8;&#x5149;&#x6807;</h3>
-<p><code>ctrl+w l [h][k][j][w]</code></p>
-<h4 id="%E7%A7%BB%E5%8A%A8%E5%88%86%E5%B1%8F">&#x79FB;&#x52A8;&#x5206;&#x5C4F;</h4>
-<p><code>ctrl+W L[H][K][J]</code></p>
-<p><code>ctrl+W =</code> &#x6240;&#x6709;&#x5C4F;&#x90FD;&#x6709;&#x4E00;&#x6837;&#x7684;&#x9AD8;&#x5EA6;</p>
-<p><code>ctrl+W +</code> &#x589E;&#x52A0;&#x9AD8;&#x5EA6;</p>
-<p><code>ctrl+W -</code> &#x51CF;&#x5C11;&#x9AD8;&#x5EA6;</p>
-<h2 id="%E6%A0%87%E7%AD%BE">&#x6807;&#x7B7E;</h2>
-<p><code>vim -p filename</code> &#x4EE5;&#x591A;&#x6807;&#x7B7E;&#x5F62;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;</p>
-<h3 id="%E6%A0%87%E7%AD%BE%E6%93%8D%E4%BD%9C">&#x6807;&#x7B7E;&#x64CD;&#x4F5C;</h3>
-<ul>
-<li>tabnew filename &#x589E;&#x52A0;&#x6807;&#x7B7E;</li>
-<li>tabe filename &#x5728;&#x65B0;&#x6807;&#x7B7E;&#x4E2D;&#x6253;&#x5F00;&#x6587;&#x4EF6;</li>
-<li>tabc &#x5173;&#x95ED;&#x5F53;&#x524D;tab</li>
-<li>tabo &#x5173;&#x95ED;&#x5176;&#x4ED6;&#x6240;&#x6709;tab</li>
-<li>tabs &#x67E5;&#x770B;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;tab</li>
-<li>tabp &#x6216;gT &#x524D;&#x4E00;&#x4E2A;</li>
-<li>tabn &#x6216;gt &#x540E;&#x4E00;&#x4E2A;</li>
-<li>tabsplit &#x6253;&#x5F00;&#x5F53;&#x524D;&#x7F13;&#x51B2;&#x533A;&#x6587;&#x4EF6;</li>
-<li>tabf &#x641C;&#x7D22;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x5E76;&#x6253;&#x5F00;</li>
-<li>tabdo <command> &#x591A;&#x6807;&#x7B7E;&#x9875;&#x547D;&#x4EE4;</li>
-</ul>
-<h3 id="%E7%A7%BB%E5%8A%A8">&#x79FB;&#x52A8;</h3>
-<ul>
-<li>tabp &#x6216;gT &#x524D;&#x4E00;&#x4E2A;</li>
-<li>tabn &#x6216;gt &#x540E;&#x4E00;&#x4E2A;</li>
-<li>tabfirst &#x6216;tabr &#x79FB;&#x52A8;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;</li>
-<li>tablast &#x79FB;&#x52A8;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;</li>
-<li>tabm[n] &#x79FB;&#x52A8;&#x5230;&#x7B2C;n&#x4E2A;&#x6807;&#x7B7E;</li>
-</ul>
-<h2 id="%E9%85%8D%E7%BD%AE">&#x914D;&#x7F6E;</h2>
-<ul>
-<li>vim &#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x6253;&#x5F00;10&#x4E2A;&#x6807;&#x7B7E;&#x9875; <code>set tabpagemax=15</code></li>
-<li>&#x6807;&#x7B7E;&#x9875;&#x5728;&#x7A97;&#x53E3;&#x4E0A;&#x65B9;&#x662F;&#x5426;&#x663E;&#x793A; `set showtabline=[1,2,3]</li>
-<li><code>help tab-page-intro</code> &#x5E2E;&#x52A9;</li>
-</ul>
-<h2 id="%E5%BF%AB%E6%8D%B7%E5%91%BD%E4%BB%A4">&#x5FEB;&#x6377;&#x547D;&#x4EE4;</h2>
-<ul>
-<li><code>:n</code> &#x8DF3;&#x81F3;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
-<li><code>:e#</code> &#x56DE;&#x5230;&#x4E4B;&#x524D;&#x7F16;&#x8F91;&#x6587;&#x4EF6;</li>
-<li><code>:Ex</code> &#x76EE;&#x5F55;&#x6D4F;&#x89C8;</li>
-<li><code>:Sex</code> &#x6C34;&#x5E73;&#x5206;&#x9694;&#x7A97;&#x53E3;&#xFF0C;&#x5E76;&#x5F00;&#x542F;&#x76EE;&#x5F55;&#x6D4F;&#x89C8;&#x5668;</li>
-<li><code>:ls</code> &#x663E;&#x793A;buffer&#x60C5;&#x51B5;</li>
-<li><code>:shell</code> &#x4E0D;&#x5173;&#x95ED;vim&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5207;&#x6362;&#x81F3;shell</li>
-<li><code>:exit</code> &#x4ECE;shell&#x56DE;&#x5230;vim</li>
-<li>ZZ &#x5B58;&#x50A8;&#x79BB;&#x5F00;</li>
-<li>:r [filename] &#x8BFB;&#x53D6;&#x6587;&#x6863;</li>
-<li>:n1,n2 w [filename] &#x5B58;&#x50A8;n1,n2&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x4E3A;filename&#x6587;&#x6863;</li>
-</ul>
+<p>vim &#x5FEB;&#x6377;&#x952E;&#x6574;&#x7406;&#x641C;&#x96C6;</p>
 <h2 id="%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">&#x57FA;&#x672C;&#x64CD;&#x4F5C;</h2>
 <h3 id="%E7%A7%BB%E5%8A%A8">&#x79FB;&#x52A8;</h3>
-<ul>
-<li>C + f &#x4E0B;&#x79FB;&#x4E00;&#x9875;</li>
-<li>C + b &#x4E0A;&#x79FB;&#x4E00;&#x9875;</li>
-<li>C + d &#x4E0B;&#x79FB;&#x534A;&#x9875;</li>
-<li>C + u &#x4E0A;&#x79FB;&#x534A;&#x9875;</li>
-<li><ul>
-<li>&#x5149;&#x6807;&#x4E0B;&#x79FB;&#x4E00;&#x5217;</li>
-</ul>
-</li>
-<li><ul>
-<li>&#x5149;&#x6807;&#x4E0A;&#x79FB;&#x4E00;&#x5217;</li>
-</ul>
-</li>
-<li>n <space> &#x53F3;&#x79FB;n &#x4E2A;&#x5B57;&#x7B26;</space></li>
-<li>0 [Home] &#x884C;&#x9996;</li>
-<li>gg == 1G</li>
-<li><p>n <Enter> &#x4E0B;&#x79FB;n &#x884C;</Enter></p>
-</li>
-<li><p>zt</p>
-</li>
-<li>zz</li>
-<li><p>zb</p>
-</li>
-<li><p>w [W]</p>
-</li>
-<li>b [B]</li>
-<li>e [E]</li>
-<li>ge [gE]</li>
-</ul>
+<h4 id="movement-by-screensi">Movement by screensi</h4>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl + f</td>
+<td>&#x4E0B;&#x79FB;&#x4E00;&#x9875;</td>
+<td>ctrl + b</td>
+<td>&#x4E0A;&#x79FB;&#x4E00;&#x9875;</td>
+</tr>
+<tr>
+<td>ctrl + d</td>
+<td>&#x4E0B;&#x79FB;&#x534A;&#x9875;</td>
+<td>ctrl + u</td>
+<td>&#x4E0A;&#x79FB;&#x534A;&#x9875;</td>
+</tr>
+<tr>
+<td>ctrl + y</td>
+<td>&#x4E0B;&#x79FB;&#x4E00;&#x884C;</td>
+<td>ctrl + e</td>
+<td>&#x4E0A;&#x79FB;&#x4E00;&#x884C;</td>
+</tr>
+<tr>
+<td>zt[Enter]</td>
+<td>&#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x9876;&#x90E8;</td>
+<td>zz[.]</td>
+<td>&#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#x95F4;</td>
+</tr>
+<tr>
+<td>zb[-]</td>
+<td>&#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x5E95;&#x90E8;</td>
+<td>nzz</td>
+<td>&#x7B2C;n&#x884C;&#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#x95F4;</td>
+</tr>
+<tr>
+<td>H</td>
+<td>&#x79FB;&#x5230;&#x5C4F;&#x5E55;&#x9876;&#x90E8;&#x7684;&#x884C;</td>
+<td>M</td>
+<td>&#x79FB;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#x95F4;&#x7684;&#x884C;</td>
+</tr>
+<tr>
+<td>L</td>
+<td>&#x79FB;&#x5230;&#x5C4F;&#x5E55;&#x5E95;&#x90E8;&#x7684;&#x884C;</td>
+<td>nH</td>
+<td>&#x79FB;&#x5230;&#x9876;&#x90E8;&#x4E0B;n&#x884C;</td>
+</tr>
+<tr>
+<td>nL</td>
+<td>&#x79FB;&#x5230;&#x5E95;&#x90E8;&#x4E0A;n&#x884C;</td>
+<td>nEnter</td>
+<td>&#x4E0B;&#x79FB;n&#x884C;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x4E0B;&#x79FB;&#x4E00;&#x884C;</td>
+<td>-</td>
+<td>&#x4E0A;&#x79FB;&#x4E00;&#x884C;</td>
+</tr>
+<tr>
+<td>^</td>
+<td>&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x683C;&#x5904;</td>
+<td>n\</td>
+<td>&#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x884C;&#x7684;n&#x5217;</td>
+</tr>
+<tr>
+<td>n <space></space></td>
+<td>&#x53F3;&#x79FB;n &#x4E2A;&#x5B57;&#x7B26;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="movement-by-text-blocksi">Movement by text blocksi</h4>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w</td>
+<td>&#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5F00;&#x5934;</td>
+<td>b</td>
+<td>&#x79FB;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5F00;&#x5934;</td>
+</tr>
+<tr>
+<td>e</td>
+<td>&#x79FB;&#x5230;&#x5355;&#x8BCD;&#x7ED3;&#x5C3E;</td>
+<td>(</td>
+<td>&#x79FB;&#x5230;&#x5F53;&#x524D;&#x53E5;&#x5B50;&#x5F00;&#x5934;</td>
+</tr>
+<tr>
+<td>)</td>
+<td>&#x4E0B;&#x4E00;&#x884C;&#x53E5;&#x5B50;&#x5F00;&#x5934;</td>
+<td>{</td>
+<td>&#x8FD9;&#x4E00;&#x6BB5;&#x7684;&#x5F00;&#x5934;</td>
+</tr>
+<tr>
+<td>}</td>
+<td>&#x4E0B;&#x4E00;&#x6BB5;&#x7684;&#x5F00;&#x5934;</td>
+<td>[[</td>
+<td>&#x8FD9;&#x4E00;&#x8282;&#x7684;&#x5F00;&#x5934;</td>
+</tr>
+<tr>
+<td>]]</td>
+<td>&#x4E0B;&#x4E00;&#x8282;&#x7684;&#x5F00;&#x5934;</td>
+<td>ge [gE]</td>
+<td>&#x79FB;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="movement-by-searches-for-patternsi">Movement by searches for patternsi</h4>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td>&#x5F80;&#x524D;&#x641C;&#x7D22;</td>
+<td>?</td>
+<td>&#x5F80;&#x56DE;&#x641C;&#x7D22;</td>
+</tr>
+<tr>
+<td>n [/Enter]</td>
+<td>&#x5F80;&#x524D;&#x91CD;&#x590D;&#x641C;&#x7D22;</td>
+<td>N [?Enter]</td>
+<td>&#x5F80;&#x56DE;&#x91CD;&#x590D;&#x641C;&#x7D22;</td>
+</tr>
+<tr>
+<td>d/c</td>
+<td>&#x641C;&#x7D22;c&#x5B57;&#x7B26;&#x5E76;&#x5220;&#x9664;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;</td>
+<td>fx</td>
+<td>&#x5411;&#x540E;&#x641C;&#x7D22;x</td>
+</tr>
+<tr>
+<td>Fx</td>
+<td>&#x5411;&#x524D;&#x641C;&#x7D22;x</td>
+<td>tx</td>
+<td>&#x5411;&#x540E;&#x641C;&#x7D22;x</td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>&#x5411;&#x524D;&#x641C;&#x7D22;x</td>
+<td>;</td>
+<td>&#x91CD;&#x590D;&#x4E0A;&#x4E00;&#x6B21;&#x641C;&#x7D22;</td>
+</tr>
+<tr>
+<td>,</td>
+<td>&#x91CD;&#x590D;&#x641C;&#x7D22;&#xFF0C;&#x65B9;&#x5411;&#x76F8;&#x53CD;</td>
+</tr>
+</tbody>
+</table>
+<p>set nowrapscan &#x63A7;&#x5236;&#x641C;&#x7D22;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7ED5;&#x56DE;&#x5F00;&#x5934;</p>
+<h4 id="movement-by-line-numberi">Movement by line numberi</h4>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G</td>
+<td>&#x6587;&#x4EF6;&#x5E95;&#x90E8;</td>
+<td>gg</td>
+<td>&#x6587;&#x4EF6;&#x9996;&#x884C;</td>
+</tr>
+<tr>
+<td>nG</td>
+<td>&#x79FB;&#x5230;n&#x884C;</td>
+<td>``</td>
+<td>&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>&apos;&apos;</td>
+<td>&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
 <h3 id="%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4">&#x590D;&#x5236;&#x7C98;&#x8D34;</h3>
 <p><code>[line]y[scope]</code> &#x590D;&#x5236;</p>
 <p><code>p/P</code> &#x7C98;&#x8D34;</p>
@@ -815,6 +921,239 @@ git clone git_path_url
 </li>
 <li><code>1,$s/word/replace/gc</code> &#x786E;&#x8BA4;&#x5E76;&#x66FF;&#x6362;&#x6574;&#x7BC7;&#x6587;&#x4EF6;&#x7684;word &#x4E3A;replace</li>
 </ul>
+<h2 id="%E5%A4%9A%E7%AA%97%E5%8F%A3">&#x591A;&#x7A97;&#x53E3;</h2>
+<p>:[n]split[++opt][+cmd][file]</p>
+<ul>
+<li>n &#x65B0;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x884C;&#x6570;</li>
+<li>opt &#x9009;&#x9879;</li>
+<li>&#x6267;&#x884C;&#x6307;&#x4EE4;</li>
+<li>&#x6B32;&#x7F16;&#x8F91;&#x6587;&#x4EF6;</li>
+</ul>
+<h3 id="%E6%89%93%E5%BC%80%E5%A4%9A%E7%AA%97%E5%8F%A3">&#x6253;&#x5F00;&#x591A;&#x7A97;&#x53E3;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vim -On file1 file2...</td>
+<td>&#x542F;&#x52A8;&#x65F6;&#x5206;&#x5C4F;</td>
+<td>o</td>
+<td>&#x662F;&#x5B57;&#x6BCD;o</td>
+</tr>
+<tr>
+<td>n</td>
+<td>&#x662F;&#x6570;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x5206;&#x6210;&#x51E0;&#x5C4F;</td>
+<td>ctrl+w v [vsp]</td>
+<td>&#x5DE6;&#x53F3;&#x5206;&#x9694;&#x5F53;&#x524D;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>:vsp filename</td>
+<td>&#x6253;&#x5F00;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5DE6;&#x53F3;&#x5206;&#x9694;</td>
+<td>vim -on file1 file2...</td>
+<td>&#x542F;&#x52A8;&#x65F6;&#x5206;&#x5C4F;</td>
+</tr>
+<tr>
+<td>ctrl+w s [sp]</td>
+<td>&#x4E0A;&#x4E0B;&#x5206;&#x9694;&#xFF0C;&#x5F53;&#x524D;&#x6587;&#x4EF6;</td>
+<td>:sp filename</td>
+<td>&#x6253;&#x5F00;&#x65B0;&#x6587;&#x4EF6;,&#x4E0A;&#x4E0B;&#x5206;&#x9694;</td>
+</tr>
+<tr>
+<td>new</td>
+<td>&#x6C34;&#x5E73;&#x7A97;&#x53E3;</td>
+<td>vnew</td>
+<td>&#x5782;&#x76F4;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>sview filename</td>
+<td>&#x6C34;&#x5E73;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
+<td>sfind filename</td>
+<td>&#x5728;&#x8DEF;&#x5F84;&#x4E2D;&#x67E5;&#x627E;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>ctrl+w c</td>
+<td>&#x5173;&#x95ED;&#x5206;&#x5C4F;</td>
+<td>ctrl+w q</td>
+<td>&#x5173;&#x95ED;&#x5206;&#x5C4F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E5%88%87%E6%8D%A2%E7%AA%97%E5%8F%A3">&#x5207;&#x6362;&#x7A97;&#x53E3;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl+w l [h][k][j][w]</td>
+<td>&#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+<td>ctrl+w w</td>
+<td>&#x7A97;&#x53E3;&#x95F4;&#x5207;&#x6362;</td>
+</tr>
+<tr>
+<td>ctrl+w t</td>
+<td>&#x79FB;&#x5230;&#x5DE6;&#x4E0A;&#x89D2;&#x7A97;&#x53E3;</td>
+<td>ctrl+w b</td>
+<td>&#x79FB;&#x5230;&#x53F3;&#x4E0B;&#x89D2;&#x7A97;&#x53E3;</td>
+</tr>
+<tr>
+<td>ctrl+w p</td>
+<td>&#x79FB;&#x5230;&#x524D;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E7%A7%BB%E5%8A%A8%E7%AA%97%E5%8F%A3">&#x79FB;&#x52A8;&#x7A97;&#x53E3;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl+w r</td>
+<td>&#x8F6E;&#x6362;&#x7A97;&#x53E3;&#x4F4D;&#x7F6E;</td>
+<td>ctrl+w x</td>
+<td>&#x4EA4;&#x6362;&#x540C;&#x884C;&#x540C;&#x5217;&#x7A97;&#x53E3;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>ctrl+w T</td>
+<td>&#x65B0;&#x5EFA;&#x7A97;&#x53E3;&#x5230;&#x65B0;&#x6807;&#x7B7E;&#x9875;</td>
+<td>ctrl+W L[H][K][J]</td>
+<td>&#x79FB;&#x52A8;&#x7A97;&#x53E3;&#x5230;&#x76F8;&#x5E94;&#x65B9;&#x5411;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E8%B0%83%E6%95%B4%E7%AA%97%E5%8F%A3">&#x8C03;&#x6574;&#x7A97;&#x53E3;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl+w =</td>
+<td>&#x6240;&#x6709;&#x5C4F;&#x90FD;&#x6709;&#x4E00;&#x6837;&#x7684;&#x9AD8;&#x5EA6;</td>
+<td>ctrl+w + [:resize +n]</td>
+<td>&#x589E;&#x52A0;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td>ctrl+w - [:resize +n]</td>
+<td>&#x51CF;&#x5C11;&#x9AD8;&#x5EA6;</td>
+<td>:resize n</td>
+<td>&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x6C34;&#x5E73;&#x5C3A;&#x5BF8;</td>
+</tr>
+<tr>
+<td>ctrl+w &gt;</td>
+<td>&#x589E;&#x52A0;&#x7A97;&#x53E3;&#x5BBD;&#x5EA6;</td>
+<td>ctrl+w &lt;</td>
+<td>&#x51CF;&#x5C11;&#x7A97;&#x53E3;&#x5BBD;&#x5EA6;</td>
+</tr>
+<tr>
+<td>ctrl+w _</td>
+<td>&#x6700;&#x5927;&#x7A97;&#x53E3;&#x9AD8;&#x5EA6;</td>
+<td>ctrl+w</td>
+<td>&#x6700;&#x5927;&#x7A97;&#x53E3;&#x5BBD;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E7%BC%93%E5%86%B2%E5%8C%BA">&#x7F13;&#x51B2;&#x533A;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>windo</td>
+<td>&#x5728;&#x6BCF;&#x4E2A;&#x7A97;&#x53E3;&#x6267;&#x884C;&#x547D;&#x4EE4;</td>
+<td>bufdo</td>
+<td>&#x5728;&#x6BCF;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x6267;&#x884C;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td>ls [ls!][files][buffers]</td>
+<td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x7F13;&#x51B2;&#x533A;</td>
+<td>ball</td>
+<td>&#x8F7D;&#x5165;&#x6240;&#x6709;&#x7F13;&#x51B2;&#x533A;</td>
+</tr>
+<tr>
+<td>badd file</td>
+<td>&#x5C06;&#x6587;&#x4EF6;&#x52A0;&#x5165;&#x5217;&#x8868;</td>
+<td>bunload</td>
+<td>&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x5378;&#x8F7D;</td>
+</tr>
+<tr>
+<td>buffer[n] &#x79FB;&#x5230;&#x7F13;&#x51B2;&#x533A;n</td>
+<td>bnext[n] &#x79FB;&#x5230;&#x63A5;&#x4E0B;&#x6765;&#x7684;n&#x4E2A;&#x7F13;&#x51B2;&#x533A;</td>
+</tr>
+<tr>
+<td>bNext[n] &#x79FB;&#x5230;&#x524D;n&#x5404;&#x7F13;&#x51B2;&#x533A;</td>
+<td>bfirst</td>
+<td>&#x79FB;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;</td>
+</tr>
+<tr>
+<td>blast</td>
+<td>&#x79FB;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%88%86%E9%A1%B5">&#x5206;&#x9875;</h2>
+<p><code>vim -p filename</code> &#x4EE5;&#x591A;&#x5206;&#x9875;&#x5F62;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;</p>
+<h3 id="%E5%88%86%E9%A1%B5%E6%93%8D%E4%BD%9C">&#x5206;&#x9875;&#x64CD;&#x4F5C;</h3>
+<p>| tabnew filename &#x589E;&#x52A0;&#x5206;&#x9875;
+| tabe filename &#x5728;&#x65B0;&#x5206;&#x9875;&#x4E2D;&#x6253;&#x5F00;&#x6587;&#x4EF6;
+| tabc &#x5173;&#x95ED;&#x5F53;&#x524D;tab
+| tabo &#x5173;&#x95ED;&#x5176;&#x4ED6;&#x6240;&#x6709;tab
+| tabs &#x67E5;&#x770B;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;tab
+| tabp &#x6216;gT &#x524D;&#x4E00;&#x4E2A;
+| tabn &#x6216;gt &#x540E;&#x4E00;&#x4E2A;
+| tabsplit &#x6253;&#x5F00;&#x5F53;&#x524D;&#x7F13;&#x51B2;&#x533A;&#x6587;&#x4EF6;
+| tabf &#x641C;&#x7D22;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x5E76;&#x6253;&#x5F00;
+| tabdo <command> &#x591A;&#x5206;&#x9875;&#x9875;&#x547D;&#x4EE4;</p>
+<h3 id="%E7%A7%BB%E5%8A%A8">&#x79FB;&#x52A8;</h3>
+<p>| tabp &#x6216;gT &#x524D;&#x4E00;&#x4E2A;
+| tabn &#x6216;gt &#x540E;&#x4E00;&#x4E2A;
+| tabfirst &#x6216;tabr &#x79FB;&#x52A8;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x9875;
+| tablast &#x79FB;&#x52A8;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;
+| tabm[n] &#x79FB;&#x52A8;&#x5230;&#x7B2C;n&#x4E2A;&#x5206;&#x9875;</p>
+<h2 id="%E9%85%8D%E7%BD%AE">&#x914D;&#x7F6E;</h2>
+<p>| vim &#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x6253;&#x5F00;10&#x4E2A;&#x5206;&#x9875;&#x9875; <code>set tabpagemax=15</code>
+| &#x5206;&#x9875;&#x9875;&#x5728;&#x7A97;&#x53E3;&#x4E0A;&#x65B9;&#x662F;&#x5426;&#x663E;&#x793A; <code>set showtabline=[1,2,3]</code>
+| <code>help tab-page-intro</code> &#x5E2E;&#x52A9;</p>
+<h2 id="%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4">&#x5176;&#x4ED6;&#x547D;&#x4EE4;</h2>
+<p>| <code>:n</code> &#x8DF3;&#x81F3;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;
+| <code>:e#</code> &#x56DE;&#x5230;&#x4E4B;&#x524D;&#x7F16;&#x8F91;&#x6587;&#x4EF6;
+| <code>:Ex</code> &#x76EE;&#x5F55;&#x6D4F;&#x89C8;
+| <code>:Sex</code> &#x6C34;&#x5E73;&#x5206;&#x9694;&#x7A97;&#x53E3;&#xFF0C;&#x5E76;&#x5F00;&#x542F;&#x76EE;&#x5F55;&#x6D4F;&#x89C8;&#x5668;
+| <code>:ls</code> &#x663E;&#x793A;buffer&#x60C5;&#x51B5;
+| <code>:shell</code> &#x4E0D;&#x5173;&#x95ED;vim&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5207;&#x6362;&#x81F3;shell
+| <code>:exit</code> &#x4ECE;shell&#x56DE;&#x5230;vim
+| ZZ &#x5B58;&#x50A8;&#x79BB;&#x5F00;
+| :r [filename] &#x8BFB;&#x53D6;&#x6587;&#x6863;
+| :n1,n2 w [filename] &#x5B58;&#x50A8;n1,n2&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x4E3A;filename&#x6587;&#x6863;</p>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;: &#x300A;&#x5B66;&#x4E60;vi&#x548C;vim&#x7F16;&#x8F91;&#x5668; &#x7B2C;&#x4E03;&#x7248;&#x300B;</p>
 
                     
                     </section>
@@ -828,7 +1167,7 @@ git clone git_path_url
         <a href="../../DevelopmentEnvironment/Editor/tmux.html" class="navigation navigation-prev " aria-label="Previous page: Tmux"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../DevelopmentEnvironment/Editor/NERDTree.html" class="navigation navigation-next " aria-label="Next page: plugin keymap"><i class="fa fa-angle-right"></i></a>
+        <a href="../../DevelopmentEnvironment/Editor/NERDTree.html" class="navigation navigation-next " aria-label="Next page: NERDTree"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
