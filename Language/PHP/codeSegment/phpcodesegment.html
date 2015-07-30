@@ -29,7 +29,7 @@
         
     
     
-    <link rel="next" href="../../../Language/Lua/LuaSyntax.html" />
+    <link rel="next" href="../../../Language/PHP/trait/trait.html" />
     
     
     <link rel="prev" href="../../../Language/PHP/php.html" />
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="1.1.1" data-basepath="../../.." data-revision="Fri Jul 24 2015 13:02:10 GMT+0800 (CST)">
+    <div class="book" data-level="1.1.1" data-basepath="../../.." data-revision="Thu Jul 30 2015 18:05:59 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -128,6 +128,21 @@
                             <b>1.1.1.</b>
                         
                         PHP Code Segment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="Language/PHP/trait/trait.html">
+            
+                
+                    <a href="../../../Language/PHP/trait/trait.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Trait
                     </a>
                 
             
@@ -771,8 +786,13 @@
                         <h3 id="%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97">&#x9519;&#x8BEF;&#x65E5;&#x5FD7;</h3>
 <pre><code>error_reporting(E_ALL);
 ini_set(&quot;display_errors&quot;, &apos;On&apos;);
+</code></pre><p>&#x5FFD;&#x7565;DEPRECATED&#x548C;NOTICE&#x9519;&#x8BEF;</p>
+<pre><code>error_reporting(E_ALL^E_NOTICE);
 </code></pre><h3 id="%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA">&#x8BBE;&#x7F6E;&#x65F6;&#x533A;</h3>
 <pre><code>date_default_timezone_set(&apos;PRC&apos;); //&#x8BBE;&#x7F6E;&#x4E2D;&#x56FD;&#x65F6;&#x533A;
+</code></pre><h3 id="%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD">&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;</h3>
+<pre><code>header(&apos;Content-type: application/csv&apos;);
+header(&apos;Content-Disposition: attachment; filename=&apos;.$querydate.&apos;flightflow.csv&apos;);
 </code></pre>
                     
                     </section>
@@ -786,7 +806,7 @@ ini_set(&quot;display_errors&quot;, &apos;On&apos;);
         <a href="../../../Language/PHP/php.html" class="navigation navigation-prev " aria-label="Previous page: PHP"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../Language/Lua/LuaSyntax.html" class="navigation navigation-next " aria-label="Next page: Lua"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../Language/PHP/trait/trait.html" class="navigation navigation-next " aria-label="Next page: Trait"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
