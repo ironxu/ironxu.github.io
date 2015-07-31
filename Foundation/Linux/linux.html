@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4.1" data-basepath="../.." data-revision="Thu Jul 30 2015 18:05:59 GMT+0800 (CST)">
+    <div class="book" data-level="4.1" data-basepath="../.." data-revision="Fri Jul 31 2015 19:35:02 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -143,6 +143,21 @@
                             <b>1.1.2.</b>
                         
                         Trait
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="Language/PHP/FileSystem/filesystem.html">
+            
+                
+                    <a href="../../Language/PHP/FileSystem/filesystem.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        File System
                     </a>
                 
             
@@ -788,6 +803,95 @@
 <ul>
 <li>tar zxf Achieve.tar.gz</li>
 </ul>
+<h3 id="crontab">Crontab</h3>
+<p>crontab&#x53EF;&#x4EE5;&#x5B9A;&#x65F6;&#x53BB;&#x6267;&#x884C;&#x4F60;&#x8981;&#x505A;&#x7684;&#x52A8;&#x4F5C;</p>
+<ul>
+<li>crontab -u //&#x8BBE;&#x5B9A;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7684;cron&#x670D;&#x52A1;&#xFF0C;&#x4E00;&#x822C;root&#x7528;&#x6237;&#x5728;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6B64;&#x53C2;&#x6570;</li>
+<li>crontab -l //&#x5217;&#x51FA;&#x67D0;&#x4E2A;&#x7528;&#x6237;cron&#x670D;&#x52A1;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;</li>
+<li>crontab -r //&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7684;cron&#x670D;&#x52A1;</li>
+<li>crontab -e //&#x7F16;&#x8F91;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x7684;cron&#x670D;&#x52A1;</li>
+</ul>
+<p>crontab&#x5185;&#x7684;&#x57FA;&#x672C;&#x7F16;&#x8F91;&#x683C;&#x5F0F;&#x5982;&#x4E0B;</p>
+<blockquote>
+<p>*&#x3000;*&#x3000;*&#x3000;*&#x3000;*&#x3000;&#x3000;command</p>
+<p>&#x5206;&#x3000; &#x65F6;&#x3000; &#x65E5;&#x3000; &#x6708;&#x3000;&#x5468;&#x3000;  &#x547D;&#x4EE4;</p>
+</blockquote>
+<ul>
+<li>&#x7B2C;1&#x5217;&#x8868;&#x793A;&#x5206;&#x949F;1&#xFF5E;59 &#x6BCF;&#x5206;&#x949F;&#x7528;<em>&#x6216;&#x8005; </em>/1&#x8868;&#x793A;</li>
+<li>&#x7B2C;2&#x5217;&#x8868;&#x793A;&#x5C0F;&#x65F6;1&#xFF5E;23&#xFF08;0&#x8868;&#x793A;0&#x70B9;&#xFF09;</li>
+<li>&#x7B2C;3&#x5217;&#x8868;&#x793A;&#x65E5;&#x671F;1&#xFF5E;31</li>
+<li>&#x7B2C;4&#x5217;&#x8868;&#x793A;&#x6708;&#x4EFD;1&#xFF5E;12</li>
+<li>&#x7B2C;5&#x5217;&#x6807;&#x8BC6;&#x53F7;&#x661F;&#x671F;0&#xFF5E;6&#xFF08;0&#x8868;&#x793A;&#x661F;&#x671F;&#x5929;&#xFF09;</li>
+<li>&#x7B2C;6&#x5217;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;</li>
+</ul>
+<p><strong>&#x65F6;&#x95F4;&#x8868;&#x793A;</strong></p>
+<ul>
+<li>*:    &#x6BCF;&#x6B21;&#x90FD;&#x6267;&#x884C;</li>
+<li>*/n:  &#x6BCF;n&#x957F;&#x65F6;&#x95F4;&#x5355;&#x4F4D;&#x6267;&#x884C;&#x4E00;&#x6B21;</li>
+<li>T1-T2: T1,T2&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x6267;&#x884C;</li>
+<li>a,b,c: &#x5F53;&#x67D0;&#x65F6;&#x95F4;&#x65F6;&#x6267;&#x884C;</li>
+</ul>
+<p><strong>&#x76EE;&#x5F55;</strong></p>
+<ul>
+<li>/etc/crontab &#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x7684;&#x7684;&#x8C03;&#x5EA6;&#x7A0B;&#x5E8F;</li>
+<li>/var/spool/cron &#x7528;&#x6237;&#x751F;&#x6210;&#x7684;crontab</li>
+<li>/etc/cron.deny &#x8868;&#x793A;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;crontab &#x547D;&#x4EE4;&#x7684;&#x7528;&#x6237;</li>
+<li>/etc/cron.allow &#x8868;&#x793A;&#x80FD;&#x4F7F;&#x7528;crontab&#x7684;&#x7528;&#x6237;&#x3002;</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;cron.allow&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x3002;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x540C;&#x65F6;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;/etc/cron.allow &#x4F18;&#x5148;&#x3002;
+&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x6709;&#x8D85;&#x7EA7;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5B89;&#x6392;&#x4F5C;&#x4E1A;.</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre><code>0,30 18-23 * * * /etc/init.d/smb restart
+&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x8868;&#x793A;&#x5728;&#x6BCF;&#x5929;18 : 00&#x81F3;23 : 00&#x4E4B;&#x95F4;&#x6BCF;&#x9694;30&#x5206;&#x949F;&#x91CD;&#x542F;smb &#x3002;
+</code></pre><p><strong>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</strong></p>
+<ul>
+<li>&#x5728;SHELL&#x4E2D;&#x8BBE;&#x7F6E;&#x4E86;&#x5FC5;&#x8981;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1B;&#x4F8B;&#x5982;&#x4E00;&#x4E2A;shell&#x811A;&#x672C;&#x624B;&#x5DE5;&#x6267;&#x884C;OK&#xFF0C;&#x4F46;&#x662F;&#x914D;&#x7F6E;&#x6210;&#x540E;&#x53F0;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x83B7;&#x53D6;&#x4E0D;&#x5230;ORACLE&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;crontab&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x95EE;&#x9898;&#xFF0C;Crontab&#x7684;&#x73AF;&#x5883;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x4E2D;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x73AF;&#x5883;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;shell&#x811A;&#x672C;&#x4E2D;&#x6DFB;&#x52A0;&#x5FC5;&#x8981;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x8BBE;&#x7F6E;</li>
+<li>&#x5C3D;&#x91CF;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x91C7;&#x7528;&#x5B8C;&#x5168;&#x8DEF;&#x5F84;&#x65B9;&#x5F0F;&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>&#x65B0;&#x521B;&#x5EFA;&#x7684;cron job&#xFF0C;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x8FC7;2&#x5206;&#x949F;&#x624D;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x91CD;&#x542F;cron&#x5219;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x6BCF;&#x6761; JOB &#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x8F93;&#x51FA;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x7ED9;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x3002;&#x65E5;&#x79EF;&#x6708;&#x7D2F;&#xFF0C;&#x975E;&#x5E38;&#x7684;&#x591A;&#xFF0C;&#x751A;&#x81F3;&#x4F1A;&#x6491;&#x7206;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x3002;&#x6240;&#x4EE5;&#x6BCF;&#x6761; JOB &#x547D;&#x4EE4;&#x540E;&#x9762;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x5904;&#x7406;&#x662F;&#x975E;&#x5E38;&#x5FC5;&#x8981;&#x7684;&#xFF1A; &gt;/dev/null 2&gt;&amp;1 &#x3002;&#x524D;&#x63D0;&#x662F;&#x5BF9; Job &#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x9700;&#x8981;&#x6B63;&#x5E38;&#x8F93;&#x51FA;&#x5DF2;&#x7ECF;&#x4F5C;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x5904;&#x7406;, &#x6BD4;&#x5982;&#x8FFD;&#x52A0;&#x5230;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5F53;crontab&#x7A81;&#x7136;&#x5931;&#x6548;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;/etc/init.d/crond restart&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;&#x6216;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x770B;&#x67D0;&#x4E2A;job&#x6709;&#x6CA1;&#x6709;&#x6267;&#x884C;/&#x62A5;&#x9519;tail -f /var/log/cron&#x3002;</li>
+<li>&#x5343;&#x4E07;&#x522B;&#x4E71;&#x8FD0;&#x884C;crontab -r&#x3002;&#x5B83;&#x4ECE;Crontab&#x76EE;&#x5F55;&#xFF08;/var/spool/cron&#xFF09;&#x4E2D;&#x5220;&#x9664;&#x7528;&#x6237;&#x7684;Crontab&#x6587;&#x4EF6;&#x3002;&#x5220;&#x9664;&#x4E86;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;crontab&#x90FD;&#x6CA1;&#x4E86;&#x3002;</li>
+<li>&#x5728;crontab&#x4E2D;%&#x662F;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x6362;&#x884C;&#x7684;&#x610F;&#x601D;&#x3002;&#x5982;&#x679C;&#x8981;&#x7528;&#x7684;&#x8BDD;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;\%&#xFF0C;&#x5982;&#x7ECF;&#x5E38;&#x7528;&#x7684;date &#x2018;+%Y%m%d&#x2019;&#x5728;crontab&#x91CC;&#x662F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5E94;&#x8BE5;&#x6362;&#x6210;date &#x2018;+&apos;%Y\%m\%d&#x2019;<code>&apos;</code></li>
+</ul>
+<p><strong>&#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E0E;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;</strong></p>
+<p>&#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E9B;&#x7EF4;&#x62A4;&#x64CD;&#x4F5C;&#xFF0C;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x4EFB;&#x52A1;&#xFF0C;
+&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x653E;&#x5230;&#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x6765;&#x5B8C;&#x6210;&#xFF08;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x505A;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x8FC7;&#x6765;&#x5374;&#x4E0D;&#x884C;&#xFF0C;
+root&#x7528;&#x6237;&#x7684;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;crontab &#x2013;uroot &#x2013;e&#x201D;&#x6765;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8C03;&#x5EA6;&#x4EFB;&#x52A1;&#x76F4;&#x63A5;&#x5199;&#x5165;/etc/crontab&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;
+&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5C06;&#x4EFB;&#x52A1;&#x653E;&#x5230;/etc/crontab&#x6587;&#x4EF6;&#xFF0C;
+&#x5373;&#x4F7F;&#x5728;root&#x7528;&#x6237;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x52A1;&#x4E5F;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;</p>
+<p><strong>&#x5173;&#x4E8E; &gt;/dev/null 2&gt;&amp;1 &#x7684;&#x89E3;&#x91CA;</strong></p>
+<ul>
+<li>0&#x8868;&#x793A;&#x952E;&#x76D8;&#x8F93;&#x5165;</li>
+<li>1&#x8868;&#x793A;&#x6807;&#x51C6;&#x8F93;&#x51FA;</li>
+<li>2&#x8868;&#x793A;&#x9519;&#x8BEF;&#x8F93;&#x51FA;.</li>
+</ul>
+<pre><code>* * * * * /home/oracle/test.sh &gt;/home/oracle/log.txt &amp; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1&#xFF0C;&#x5373;&#x548C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x4E00;&#x81F4;
+* * * * * /home/oracle/test.sh 1&gt;/home/oracle/log.txt &amp;
+* * * * * /home/oracle/test.sh 2&gt;/home/oracle/log.txt &amp;
+* * * * * /home/oracle/test.sh 2&gt;/home/oracle/log.txt 2&gt;&amp;1 &amp;
+</code></pre><ul>
+<li>1,2&#x5C06;tesh.sh &#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;log.txt, &#x5373;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x4E0D;&#x6253;&#x5370;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x8F93;&#x51FA;&#x5230;log.txt&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x8FFD;&#x52A0;&#x800C;&#x4E0D;&#x662F;&#x8986;&#x76D6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; &gt;&gt;&#x4EE3;&#x66FF;&gt;</li>
+<li>2&gt;&amp;1 &#x662F;&#x5C06;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002; &#x7136;&#x540E;&#x5C06;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6587;&#x4EF6;log.txt&#x3002;</li>
+<li>&amp;1 &#x8868;&#x793A;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;1&#xFF0C;&#x8868;&#x793A;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x91CC;&#x5C11;&#x4E86;&amp;&#x5C31;&#x6210;&#x4E86;&#x6570;&#x5B57;1&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6587;&#x4EF6;1&#x3002;</li>
+</ul>
+<p><strong>&#x4FEE;&#x6539;crontab&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong></p>
+<ul>
+<li>&#x811A;&#x672C;&#x4E2D;&#x6D89;&#x53CA;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x65F6;&#x5199;&#x5168;&#x5C40;&#x8DEF;&#x5F84;&#xFF1B;</li>
+<li>&#x811A;&#x672C;&#x6267;&#x884C;&#x8981;&#x7528;&#x5230;java&#x6216;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;source&#x547D;&#x4EE4;&#x5F15;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5982;&#xFF1A;</li>
+</ul>
+<pre><code>#!/bin/sh
+source /etc/profile
+export RUN_CONF=/home/d139/conf/platform/cbp/cbp_jboss.conf
+/usr/local/jboss-4.0.5/bin/run.sh -c mev &amp;
+</code></pre><ul>
+<li>&#x5F53;&#x624B;&#x52A8;&#x6267;&#x884C;&#x811A;&#x672C;OK&#xFF0C;&#x4F46;&#x662F;crontab&#x6B7B;&#x6D3B;&#x4E0D;&#x6267;&#x884C;&#x65F6;&#x3002;&#x8FD9;&#x65F6;&#x5FC5;&#x987B;&#x5927;&#x80C6;&#x6000;&#x7591;&#x662F;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x60F9;&#x7684;&#x7978;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5728;crontab&#x4E2D;&#x76F4;&#x63A5;&#x5F15;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;&#x5982;&#xFF1A;<pre><code>0 * * * * . /etc/profile;/bin/sh /var/www/java/audit_no_count/bin/restart_audit.sh
+</code></pre></li>
+</ul>
+<p><a href="http://www.app365.com/jforum/posts/list/195.page;jsessionid=EC05A951CCA188F7063D5B2365C994C2#p295" target="_blank">http://www.app365.com/jforum/posts/list/195.page;jsessionid=EC05A951CCA188F7063D5B2365C994C2#p295</a>
+<a href="http://blog.csdn.net/dancen/article/details/24355287" target="_blank">http://blog.csdn.net/dancen/article/details/24355287</a>
+<a href="http://www.cnblogs.com/SuperXJ/archive/2012/03/16/2399856.html" target="_blank">http://www.cnblogs.com/SuperXJ/archive/2012/03/16/2399856.html</a></p>
+<h3 id="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<p><a href="http://www.powerxing.com/linux-environment-variable/" target="_blank">&#x53C2;&#x89C1;</a></p>
 
                     
                     </section>
