@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="6.1.2" data-basepath="../.." data-revision="Fri Aug 07 2015 14:59:45 GMT+0800 (CST)">
+    <div class="book" data-level="6.1.2" data-basepath="../.." data-revision="Fri Aug 14 2015 11:59:51 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -379,6 +379,27 @@
                     </a>
                 
             
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="LanguageCommon/DesignPattern/patternsegment.html">
+            
+                
+                    <a href="../../LanguageCommon/DesignPattern/patternsegment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        DesignPattern
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1103,6 +1124,21 @@
 <li><p><code>n1,n2s/word/replace/g</code> &#x66FF;&#x6362;n1 &#x5230;n2 &#x884C;&#x4E4B;&#x95F4;&#x7684;word &#x4E3A;replace</p>
 </li>
 <li><code>1,$s/word/replace/gc</code> &#x786E;&#x8BA4;&#x5E76;&#x66FF;&#x6362;&#x6574;&#x7BC7;&#x6587;&#x4EF6;&#x7684;word &#x4E3A;replace</li>
+</ul>
+<h3 id="%E5%85%A8%E5%B1%80%E6%9B%BF%E6%8D%A2">&#x5168;&#x5C40;&#x66FF;&#x6362;</h3>
+<p>&#x5BF9;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6267;&#x884C;&#x66FF;&#x6362;</p>
+<h4 id="%E6%A0%87%E8%AE%B0%E9%9C%80%E8%A6%81%E6%89%B9%E9%87%8F%E7%BC%96%E8%BE%91%E7%9A%84%E6%96%87%E4%BB%B6">&#x6807;&#x8BB0;&#x9700;&#x8981;&#x6279;&#x91CF;&#x7F16;&#x8F91;&#x7684;&#x6587;&#x4EF6;</h4>
+<pre><code>:args ./*.php //D&#x76D8;a&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7EAF;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4F5C;&#x4E0A;&#x6807;&#x8BB0;
+:args ./**/*.php  //&#x5305;&#x62EC;&#x5B50;&#x76EE;&#x5F55;
+</code></pre><h4 id="%E6%89%A7%E8%A1%8C%E6%9B%BF%E6%8D%A2">&#x6267;&#x884C;&#x66FF;&#x6362;</h4>
+<pre><code>:argdo %s/^I/    /ge |update
+</code></pre><p>&#x5C06;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;<code>abc</code>&#x66FF;&#x6362;&#x4E3A;<code>def</code>&#x5B57;&#x7B26;&#x4E32;</p>
+<ul>
+<li><code>%s</code> &#x66FF;&#x6362;&#x64CD;&#x4F5C;&#x5C06;&#x65BD;&#x4E8E;&#x6240;&#x6709;&#x884C;&#x4E0A;</li>
+<li><code>g</code> &#x4F7F;&#x5F97;&#x6BCF;&#x884C;&#x4E2D;&#x7684;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x88AB;&#x66FF;&#x6362;</li>
+<li><code>e</code> &#x907F;&#x514D;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#x62A5;&#x9519;</li>
+<li><code>|</code> &#x5206;&#x9694;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;</li>
+<li><code>update</code> &#x5728;&#x6587;&#x4EF6;&#x6709;&#x6539;&#x53D8;&#x65F6;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;</li>
 </ul>
 <h2 id="%E7%BB%84%E5%90%88%E5%91%BD%E4%BB%A4">&#x7EC4;&#x5408;&#x547D;&#x4EE4;</h2>
 <h3 id="%E7%BB%84%E5%90%88%E5%91%BD%E4%BB%A4">&#x7EC4;&#x5408;&#x547D;&#x4EE4;</h3>
