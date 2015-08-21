@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>DevOps | Outer Brain</title>
+        <title>Apache vhost | Outer Brain</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../DevOps/RESTful.html" />
+    <link rel="next" href="../DevelopmentEnvironment/developmentenvironment.html" />
     
     
-    <link rel="prev" href="../Foundation/Arithmetic/tree.html" />
+    <link rel="prev" href="../DevOps/RESTful.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-basepath=".." data-revision="Fri Aug 21 2015 16:59:12 GMT+0800 (CST)">
+    <div class="book" data-level="5.2" data-basepath=".." data-revision="Fri Aug 21 2015 16:59:12 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -592,7 +592,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5" data-path="DevOps/devops.html">
+        <li class="chapter " data-level="5" data-path="DevOps/devops.html">
             
                 
                     <a href="../DevOps/devops.html">
@@ -623,7 +623,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="DevOps/apache.html">
+        <li class="chapter active" data-level="5.2" data-path="DevOps/apache.html">
             
                 
                     <a href="../DevOps/apache.html">
@@ -982,13 +982,25 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="develop-operation">Develop &amp; Operation</h1>
-<ul>
-<li>RESTfull</li>
-<li>OAuth2.0</li>
-<li>&#x96C6;&#x7FA4;&#x8BBE;&#x8BA1;</li>
-<li>&#x5F02;&#x5730;&#x9AD8;&#x901F;&#x8BBF;&#x95EE;</li>
-</ul>
+                        <h1 id="apache-%E9%85%8D%E7%BD%AE">Apache &#x914D;&#x7F6E;</h1>
+<h2 id="aache%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA">Aache&#x865A;&#x62DF;&#x4E3B;&#x673A;</h2>
+<h3 id="%E4%BF%AE%E6%94%B9hosts">&#x4FEE;&#x6539;hosts</h3>
+<p><code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<h3 id="%E5%BC%95%E5%85%A5httpd-vhosts-conf">&#x5F15;&#x5165;httpd-vhosts.conf</h3>
+<p><code>httpd.conf</code></p>
+<h3 id="%E5%A2%9E%E5%8A%A0%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA">&#x589E;&#x52A0;&#x865A;&#x62DF;&#x4E3B;&#x673A;</h3>
+<VirtualHost 192.168.1.11:80="">
+&#x3000;&#x3000;ServerName www.test1.com
+&#x3000;&#x3000;DocumentRoot /www/test1/
+&#x3000;&#x3000;<Directory "="" www="" test1"="">
+ &#x3000;&#x3000;&#x3000;&#x3000;Options Indexes FollowSymLinks
+&#x3000;&#x3000;&#x3000;&#x3000; AllowOverride None
+&#x3000;&#x3000;&#x3000;&#x3000; Order allow,deny
+&#x3000;&#x3000; &#x3000;&#x3000;Allow From All
+ &#x3000; </Directory>
+</VirtualHost>
+
+<p><a href="http://www.cnblogs.com/hi-bazinga/archive/2012/04/23/2466605.html" target="_blank">&#x53C2;&#x8003;</a></p>
 
                     
                     </section>
@@ -999,10 +1011,10 @@
         </div>
 
         
-        <a href="../Foundation/Arithmetic/tree.html" class="navigation navigation-prev " aria-label="Previous page: Arithmetic"><i class="fa fa-angle-left"></i></a>
+        <a href="../DevOps/RESTful.html" class="navigation navigation-prev " aria-label="Previous page: RESTful API"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../DevOps/RESTful.html" class="navigation navigation-next " aria-label="Next page: RESTful API"><i class="fa fa-angle-right"></i></a>
+        <a href="../DevelopmentEnvironment/developmentenvironment.html" class="navigation navigation-next " aria-label="Next page: Development Enviroment"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
