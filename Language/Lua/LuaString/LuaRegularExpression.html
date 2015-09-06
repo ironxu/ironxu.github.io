@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Lua Data Structures | Outer Brain</title>
+        <title>Lua RegularExpression | Outer Brain</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../../../Language/Lua/LuaString/LuaRegularExpression.html" />
+    <link rel="next" href="../../../Language/Lua/LuaString/luastring.html" />
     
     
-    <link rel="prev" href="../../../Language/Lua/Require/require.html" />
+    <link rel="prev" href="../../../Language/Lua/DataStructures/datastructures.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2.4" data-basepath="../../.." data-revision="Sun Sep 06 2015 18:48:01 GMT+0800 (CST)">
+    <div class="book" data-level="1.2.5" data-basepath="../../.." data-revision="Sun Sep 06 2015 18:48:01 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -386,7 +386,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="Language/Lua/DataStructures/datastructures.html">
+        <li class="chapter " data-level="1.2.4" data-path="Language/Lua/DataStructures/datastructures.html">
             
                 
                     <a href="../../../Language/Lua/DataStructures/datastructures.html">
@@ -401,7 +401,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="Language/Lua/LuaString/LuaRegularExpression.html">
+        <li class="chapter active" data-level="1.2.5" data-path="Language/Lua/LuaString/LuaRegularExpression.html">
             
                 
                     <a href="../../../Language/Lua/LuaString/LuaRegularExpression.html">
@@ -1228,39 +1228,115 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="lua-data-structures">Lua Data Structures</h1>
-<h2 id="array">Array</h2>
-<p>&#x6574;&#x6570;&#x7D22;&#x5F15;&#x7684;table</p>
-<pre><code>a = {}
-for i=1, 1000 do
-    a[i] = 0
-end
-</code></pre><h2 id="matrices">Matrices</h2>
-<p>&#x4F7F;&#x7528;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x8868;&#x793A;&#x77E9;&#x9635;</p>
-<pre><code>N = 10
-M = 20
-mt = {}
-for i=1, N do
-    mt[i] = {}
-    for j=1, M do
-        mt[i][j] = 0
-    end
-end
-</code></pre><p>&#x5408;&#x5E76;&#x7D22;&#x5F15;&#x8868;&#x793A;&#x77E9;&#x9635;</p>
-<pre><code>ma = {}
-for i=1, N do
-    for j=1, M do
-        ma[(i-1)*M+j] = 0
-    end
-end
-</code></pre><h2 id="linked-list">Linked List</h2>
-<p>&#x94FE;&#x8868;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x503C;&#x548C;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x7684;&#x94FE;&#x63A5;</p>
-<pre><code>list = {next = list, value = v}
-loacl l = list
-while l do
-    l = l.next
-end
-</code></pre>
+                        <h1 id="lua-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">Lua &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="%E5%85%83%E5%AD%97%E7%AC%A6">&#x5143;&#x5B57;&#x7B26;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>&#x6240;&#x6709;&#x5B57;&#x7B26;</td>
+<td>%a</td>
+<td>&#x5B57;&#x6BCD;</td>
+<td>%l</td>
+<td>&#x5C0F;&#x5199;&#x5B57;&#x6BCD;</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>&#x63A7;&#x5236;&#x5B57;&#x7B26;</td>
+<td>%d</td>
+<td>&#x6570;&#x5B57;</td>
+<td>%s</td>
+<td>&#x7A7A;&#x767D;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>&#x6807;&#x70B9;&#x7B26;&#x53F7;</td>
+<td>%w</td>
+<td>&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;</td>
+<td>%x</td>
+<td>&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>&#x5927;&#x5199;&#x5B57;&#x6BCD;</td>
+<td>%z</td>
+<td>&#x5185;&#x90E8;&#x8868;&#x793A;&#x4E3A;0&#x7684;&#x5B57;&#x7B26;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>%x: &#xFF08;&#x8FD9;&#x91CC;&#x7684; x &#x662F;&#x4EFB;&#x610F;&#x975E;&#x5B57;&#x6BCD;&#x6216;&#x6570;&#x5B57;&#x7684;&#x5B57;&#x7B26;&#xFF09; &#x8868;&#x793A;&#x5B57;&#x7B26; x&#x3002; &#x8FD9;&#x662F;&#x5BF9;&#x9B54;&#x6CD5;&#x5B57;&#x7B26;&#x8F6C;&#x4E49;&#x7684;&#x6807;&#x51C6;&#x65B9;&#x6CD5;&#x3002; &#x6240;&#x6709;&#x975E;&#x5B57;&#x6BCD;&#x6216;&#x6570;&#x5B57;&#x7684;&#x5B57;&#x7B26; &#xFF08;&#x5305;&#x62EC;&#x6240;&#x6709;&#x6807;&#x70B9;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;&#x975E;&#x9B54;&#x6CD5;&#x5B57;&#x7B26;&#xFF09; &#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x524D;&#x7F6E;&#x4E00;&#x4E2A; &apos;%&apos; &#x653E;&#x5728;&#x6A21;&#x5F0F;&#x4E32;&#x4E2D;&#x8868;&#x793A;&#x81EA;&#x8EAB;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x5355;&#x4E2A;&#x5B57;&#x6BCD;&#x8868;&#x793A;&#x7684;&#x7C7B;&#x522B;&#xFF08;%a&#xFF0C;%c&#xFF0C;&#x7B49;&#xFF09;&#xFF0C; &#x82E5;&#x5C06;&#x5176;&#x5B57;&#x6BCD;&#x6539;&#x4E3A;&#x5927;&#x5199;&#xFF0C;&#x5747;&#x8868;&#x793A;&#x5BF9;&#x5E94;&#x7684;&#x8865;&#x96C6;&#x3002; &#x4F8B;&#x5982;&#xFF0C;%S &#x8868;&#x793A;&#x6240;&#x6709;&#x975E;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x3002;</li>
+<li>%n&#xFF0C; &#x8FD9;&#x91CC;&#x7684; n &#x53EF;&#x4EE5;&#x4ECE; 1 &#x5230; 9&#xFF1B; &#x8FD9;&#x4E2A;&#x6761;&#x76EE;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x7B49;&#x4E8E; n &#x53F7;&#x6355;&#x83B7;&#x7269;&#xFF08;&#x540E;&#x9762;&#x6709;&#x63CF;&#x8FF0;&#xFF09;&#x7684;&#x5B50;&#x4E32;</li>
+</ul>
+<h2 id="%E9%87%8F%E8%AF%8D">&#x91CF;&#x8BCD;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>()</td>
+<td>&#x83B7;&#x53D6;&#x5B57;&#x7B26;</td>
+<td>.</td>
+<td>&#x6240;&#x6709;&#x5B57;&#x7B26;</td>
+<td>%</td>
+<td>&#x8F6C;&#x4E49;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x91CD;&#x590D;1&#x6B21;&#x6216;&#x591A;&#x6B21;(&#x5C3D;&#x53EF;&#x80FD;&#x957F;&#x7684;&#x5339;&#x914D;)</td>
+<td>-</td>
+<td>&#x91CD;&#x590D;0&#x6B21;&#x6216;&#x591A;&#x6B21;(&#x5C3D;&#x53EF;&#x80FD;&#x77ED;&#x7684;&#x5339;&#x914D;)</td>
+<td>*</td>
+<td>&#x91CD;&#x590D;0&#x6B21;&#x6216;&#x591A;&#x6B21;(&#x5C3D;&#x53EF;&#x80FD;&#x957F;&#x7684;&#x5339;&#x914D;)</td>
+</tr>
+<tr>
+<td>?</td>
+<td>&#x51FA;&#x73B0;0&#x6B21;&#x6216;1&#x6B21;</td>
+<td>[]</td>
+<td>&#x5B57;&#x7B26;&#x7EC4;</td>
+<td>^</td>
+<td>&#x9996;&#x4F4D;&#x6216;&#x8865;&#x96C6;</td>
+</tr>
+<tr>
+<td>$</td>
+<td>&#x7ED3;&#x5C3E;</td>
+<td>%bxy</td>
+<td>&#x5339;&#x914D;&#x6210;&#x5BF9;&#x5B57;&#x7B26;(%b{})</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>%f[set]&#xFF0C; &#x6307; &#x8FB9;&#x5883;&#x6A21;&#x5F0F;&#xFF1B; &#x8FD9;&#x4E2A;&#x6761;&#x76EE;&#x4F1A;&#x5339;&#x914D;&#x5230;&#x4E00;&#x4E2A;&#x4F4D;&#x4E8E; set &#x5185;&#x67D0;&#x4E2A;&#x5B57;&#x7B26;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x4E2A;&#x7A7A;&#x4E32;&#xFF0C; &#x4E14;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E0D;&#x5C5E;&#x4E8E; set &#x3002; &#x96C6;&#x5408; set &#x7684;&#x542B;&#x4E49;&#x5982;&#x524D;&#x9762;&#x6240;&#x8FF0;&#x3002; &#x5339;&#x914D;&#x51FA;&#x7684;&#x90A3;&#x4E2A;&#x7A7A;&#x4E32;&#x4E4B;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x70B9;&#x7684;&#x8BA1;&#x7B97;&#x5C31;&#x770B;&#x6210;&#x8BE5;&#x5904;&#x6709;&#x4E2A;&#x5B57;&#x7B26; &apos;\0&apos; &#x4E00;&#x6837;&#x3002;</li>
+</ul>
+<h2 id="%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E5%87%BD%E6%95%B0">&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x51FD;&#x6570;</h2>
+<ul>
+<li>string.find() &#x5B57;&#x7B26;&#x4E32;&#x67E5;&#x627E;&#x5339;&#x914D;</li>
+<li>string.gsub() &#x5168;&#x5C40;&#x5B57;&#x7B26;&#x4E32;&#x66FF;&#x6362;</li>
+<li>string.match() &#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;</li>
+<li>string.gmatch() &#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x8FED;&#x4EE3;&#x5668;</li>
+</ul>
+<p><a href="http://www.cnblogs.com/whiteyun/archive/2009/09/02/1541043.html" target="_blank">LuaRegularExpression</a>
+<a href="http://cloudwu.github.io/lua53doc/manual.html#6.4.2" target="_blank">cloudwu</a></p>
+
                     
                     </section>
                 
@@ -1270,10 +1346,10 @@ end
         </div>
 
         
-        <a href="../../../Language/Lua/Require/require.html" class="navigation navigation-prev " aria-label="Previous page: Lua Module"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../Language/Lua/DataStructures/datastructures.html" class="navigation navigation-prev " aria-label="Previous page: Lua Data Structures"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../Language/Lua/LuaString/LuaRegularExpression.html" class="navigation navigation-next " aria-label="Next page: Lua RegularExpression"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../Language/Lua/LuaString/luastring.html" class="navigation navigation-next " aria-label="Next page: Lua String"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
