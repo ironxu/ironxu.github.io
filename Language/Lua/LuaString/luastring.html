@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Refer | Outer Brain</title>
+        <title>Lua String | Outer Brain</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../../../Language/PHP/Ob/ob.html" />
+    <link rel="next" href="../../../Language/Shell/shell.html" />
     
     
-    <link rel="prev" href="../../../Language/PHP/Optimization/Optimization.html" />
+    <link rel="prev" href="../../../Language/Lua/LuaString/LuaRegularExpression.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="1.1.5" data-basepath="../../.." data-revision="Mon Sep 07 2015 17:03:33 GMT+0800 (CST)">
+    <div class="book" data-level="1.2.6" data-basepath="../../.." data-revision="Mon Sep 07 2015 17:03:33 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -179,7 +179,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.5" data-path="Language/PHP/Refer/Refer.html">
+        <li class="chapter " data-level="1.1.5" data-path="Language/PHP/Refer/Refer.html">
             
                 
                     <a href="../../../Language/PHP/Refer/Refer.html">
@@ -416,7 +416,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="Language/Lua/LuaString/luastring.html">
+        <li class="chapter active" data-level="1.2.6" data-path="Language/Lua/LuaString/luastring.html">
             
                 
                     <a href="../../../Language/Lua/LuaString/luastring.html">
@@ -1228,62 +1228,114 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E5%BC%95%E7%94%A8">&#x5F15;&#x7528;</h1>
-<h2 id="%E8%A7%A3%E9%87%8A">&#x89E3;&#x91CA;</h2>
-<p>&#x4E0D;&#x540C;&#x7684;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5185;&#x5BB9;</p>
-<h2 id="%E5%BC%95%E7%94%A8%E4%BD%9C%E7%94%A8">&#x5F15;&#x7528;&#x4F5C;&#x7528;</h2>
-<h3 id="%E6%8C%87%E5%90%91%E5%86%85%E5%AE%B9">&#x6307;&#x5411;&#x5185;&#x5BB9;</h3>
-<p>PHP &#x7684;&#x5F15;&#x7528;&#x5141;&#x8BB8;&#x7528;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x6765;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;</p>
-<pre><code>&lt;?php
-$a  =&amp;  $b ;
-?&gt;
-</code></pre><p>&#x8FD9;&#x610F;&#x5473;&#x7740; $a &#x548C; $b &#x6307;&#x5411;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
-<h3 id="%E4%BC%A0%E9%80%92%E5%8F%98%E9%87%8F">&#x4F20;&#x9012;&#x53D8;&#x91CF;</h3>
-<p>&#x901A;&#x8FC7;&#x5728;&#x51FD;&#x6570;&#x5185;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x53D8;&#x91CF;&#x5E76;&#x4E14;&#x8BE5;&#x53D8;&#x91CF;&#x5728;&#x547C;&#x53EB;&#x8303;&#x56F4;&#x5185;&#x5F15;&#x7528;&#x4E86;&#x540C;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
-<pre><code>&lt;?php
-function foo(&amp; $var )
-{
-    $var ++;
-}
+                        <h1 id="%E5%87%BD%E6%95%B0">&#x51FD;&#x6570;</h1>
+<h2 id="string">String</h2>
+<h3 id="string-byte">string.byte</h3>
+<pre><code>-- string.byte (s [, i [, j]])
+local s = &apos;abc&apos;
+print(s:byte(1, #s))
+-- 97      98      99
+</code></pre><h3 id="string-char">string.char</h3>
+<pre><code>-- string.char
+print(string.char(97,98,99))
+-- string abc
+</code></pre><h3 id="string-dump">string.dump</h3>
+<pre><code>-- string.dump
+function hello(str)
+    print(str)
+end
+local funstr = string.dump(hello, true)
+local world = load(funstr)
+world(&apos;hello&apos;)
+-- hello
+</code></pre><h3 id="string-find">string.find</h3>
+<pre><code>-- string.find &#x53EF;&#x6355;&#x83B7;
+local s = &apos;%a*ohello&apos;
+print(s:find(&apos;%a*o&apos;, 1, true))
+-- 1       5       hell
+</code></pre><h3 id="format">format</h3>
+<pre><code>-- 1. &#x683C;&#x5F0F;&#x5316;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x4E32;
+-- string.format (formatstring, &#xB7;&#xB7;&#xB7;)
+-- &#x628A;&#x6574;&#x6570;123&#x6253;&#x5370;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
+print(string.format(&apos;%d&apos;, 123)) -- &#x4EA7;&#x751F;&#x201C;123&#x2033;
+-- &#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8DB3;&#x7684;&#x5DE6;&#x8FB9;&#x8865;&#x7A7A;&#x683C;
+print(string.format(&apos;%8d%8d&apos;, 123, 123)) -- &#x4EA7;&#x751F;&#xFF1A;&#x201C;    123    123&#x2033;
+-- &#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8DB3;&#x7684;&#x53F3;&#x8FB9;&#x8865;&#x7A7A;&#x683C;
+print(string.format(&apos;%-8d%8d&apos;, 123, 123)) --123          123
+-- 16&#x8FDB;&#x5236;
+print(string.format(&apos;%x&apos;, 123)) -- 7b
+-- 16&#x8FDB;&#x5236;&#xFF0C;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8DB3;&#x8865;0
+print(string.format(&apos;%08x&apos;, 123)) -- 0000007b
 
-$a = 5 ;
-foo( $a ); //&#x6CE8;&#x610F;&#x5728;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#x6CA1;&#x6709;&#x5F15;&#x7528;&#x7B26;&#x53F7;&#x2014;&#x2014;&#x53EA;&#x6709;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E2D;&#x6709;
-echo $a; //6
-?&gt;
-</code></pre><h3 id="%E5%BC%95%E7%94%A8%E8%BF%94%E5%9B%9E">&#x5F15;&#x7528;&#x8FD4;&#x56DE;</h3>
-<pre><code>&lt;?php
-class foo {
-    public $value = 42 ;
+-- 2. &#x63A7;&#x5236;&#x6D6E;&#x70B9;&#x6570;&#x6253;&#x5370;&#x683C;&#x5F0F;
+-- &#x6D6E;&#x70B9;&#x6570;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x7B26;&apos;%f&apos;&#x63A7;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E;6&#x4F4D;
+print(string.format(&apos;%f&apos;, 3.1415926)) -- 3.141593
+-- &#x63A7;&#x5236;&#x6253;&#x5370;&#x5BBD;&#x5EA6;&#x548C;&#x5C0F;&#x6570;&#x4F4D;&#x6570; &apos;%m.nf&apos; m &#x6253;&#x5370;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;n &#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4F4D;&#x6570;
+print(string.format(&apos;%-10.3f%d&apos;, 3.1415926, 123)) -- 3.142     123
 
-    public function &amp; getValue () {
-        return  $this -&gt; value ;
-    }
-}
+-- 3. &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;
+-- n&#x4ECE;&#x7B26;&#x4E32;&#x4E2D;&#x622A;&#x53D6;&#x5B57;&#x7B26;
+local i = &apos;abc&apos;
+print(string.format(&apos;%.2s&apos;, i))
+-- &apos;*&apos;&#x6765;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x672C;&#x6765;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#x6216;&#x7CBE;&#x5EA6;&#x7684;&#x5E38;&#x6570;&#x6570;&#x5B57;&#x7684;&#x4F4D;&#x7F6E;
+-- sprintf(s, &#x201C;%.*s%.*s&#x201D;, 7, a1, 7, a2); lua&#x4E0D;&#x652F;&#x6301;
+print(string.format(&apos;%#x&apos;, 123)) -- &apos;#&apos;&#x4EA7;&#x751F;0X
 
-$obj = new  foo ;
-$myValue = &amp; $obj -&gt; getValue ();  // $myValue is a reference to $obj-&gt;value, which is 42.
-$obj-&gt;value = 2 ;
-echo $myValue ;                 // prints the new value of $obj-&gt;value, i.e. 2.
-?&gt;
-</code></pre><p>&#x548C;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x5728;&#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x90FD;&#x7528; &amp; &#x7B26;&#x53F7;&#x2014;&#x2014;&#x6307;&#x51FA;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x5E38;&#x7684;&#x4E00;&#x4E2A;&#x62F7;&#x8D1D;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x6307;&#x51FA; $myValue  &#x662F;&#x4F5C;&#x4E3A;&#x5F15;&#x7528;&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x5E38;&#x7684;&#x8D4B;&#x503C;</p>
-<p>Note: &#x5982;&#x679C;&#x8BD5;&#x56FE;&#x8FD9;&#x6837;&#x4ECE;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5F15;&#x7528;&#xFF1A;return ($this-&gt;value);&#xFF0C;&#x8FD9;&#x5C06;&#x4E0D;&#x4F1A;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x8BD5;&#x56FE;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x7684;&#x53D8;&#x91CF;</p>
-<h2 id="%E5%8F%96%E6%B6%88%E5%BC%95%E7%94%A8">&#x53D6;&#x6D88;&#x5F15;&#x7528;</h2>
-<p>&#x5F53; unset &#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x53EA;&#x662F;&#x65AD;&#x5F00;&#x4E86;&#x53D8;&#x91CF;&#x540D;&#x548C;&#x53D8;&#x91CF;&#x5185;&#x5BB9;&#x4E4B;&#x95F4;&#x7684;&#x7ED1;&#x5B9A;&#x3002;&#x53D8;&#x91CF;&#x5185;&#x5BB9;&#x6CA1;&#x6709;&#x88AB;&#x9500;&#x6BC1;</p>
-<pre><code>&lt;?php
-$a = 1;
-$b =&amp; $a;
-unset( $a );
-?&gt;
-</code></pre><p>&#x4E0D;&#x4F1A; unset $b &#xFF0C;&#x53EA;&#x662F; $a</p>
-<h2 id="%E4%BD%BF%E7%94%A8%E5%BC%95%E7%94%A8%E7%9A%84%E7%BB%93%E6%9E%84">&#x4F7F;&#x7528;&#x5F15;&#x7528;&#x7684;&#x7ED3;&#x6784;</h2>
-<p><em>global &#x5F15;&#x7528;</em></p>
-<p>&#x5F53;&#x7528; global $var &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#x5B9E;&#x9645;&#x4E0A;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x4E2A;&#x5230;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x548C;&#x8FD9;&#x6837;&#x505A;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF1A;</p>
-<pre><code>&lt;?php
-$var =&amp; $GLOBALS[&quot;var&quot;];
-?&gt;
-</code></pre><p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;unset $var &#x4E0D;&#x4F1A; unset &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</p>
-<p><em>$this</em></p>
-<p>&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C; $this &#x6C38;&#x8FDC;&#x662F;&#x8C03;&#x7528;&#x5B83;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+-- 4. &#x6253;&#x5370;&#x5730;&#x5740;&#x4FE1;&#x606F;
+-- &#x5730;&#x5740;&#x6216;&#x8005;&#x6307;&#x9488;&#x662F;32&#x4F4D;&#x7684;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x7684;&apos;%u&apos;&#x6253;&#x5370;
+-- sprintf(s, &#x201C;%u&#x201D;, &amp;i);
+</code></pre><h3 id="string-gmatch">string.gmatch</h3>
+<pre><code>-- string.gmatch (s, pattern) &#x8FED;&#x4EE3;&#x5339;&#x914D;
+-- [[&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x51FD;&#x6570;. &#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x4F1A;&#x7EE7;&#x7EED;&#x4EE5; pattern&#x5BF9; s &#x505A;&#x5339;&#x914D;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x6355;&#x83B7;&#x5230;&#x7684;&#x503C;]]
+s = &quot;hello world from Lua&quot;
+for w in string.gmatch(s, &quot;%a+&quot;) do
+   print(w)
+end
+-- hello
+-- world
+-- from
+-- Lua
+</code></pre><h3 id="string-gsub">string.gsub</h3>
+<pre><code>-- string.gsub (s, pattern, repl [, n])
+local x = string.gsub(&apos;hello world&apos;, &apos;(%w+)&apos;, &apos;%1-%1&apos;)
+print(x) -- hello-hello world-world
+
+x = string.gsub(&apos;hello world&apos;, &apos;%w+&apos;, &apos;%0 %0&apos;, 1);
+print(x) -- hello hello world
+
+x = string.gsub(&apos;hello world from lua&apos;, &apos;(%w+)%s*(%w+)&apos;, &apos;%2 %1&apos;)
+print(x) -- world hello lua from
+
+x = string.gsub(&quot;home = $HOME, user = $USER&quot;, &quot;%$(%w+)&quot;, os.getenv)
+print(x) -- home = /home/roberto, user = roberto
+
+x = string.gsub(&quot;4+5 = $return 4+5$&quot;, &quot;%$(.-)%$&quot;, function (s)
+  return load(s)()
+end)
+print(x) -- 4+5 = 9
+
+local t = {name=&quot;lua&quot;, version=&quot;5.3&quot;}
+x = string.gsub(&quot;$name-$version.tar.gz&quot;, &quot;%$(%w+)&quot;, t)
+print(x) -- lua-5.3.tar.gz
+</code></pre><h3 id="string-match">string.match</h3>
+<pre><code>-- string.match (s, pattern [, init])
+-- &#x5B57;&#x7B26;&#x4E32; s &#x4E2D;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x80FD;&#x7528; pattern &#x5339;&#x914D;&#x5230;&#x7684;&#x90E8;&#x5206;
+local s = &apos;Ds123xa&apos;
+print(s:match(&apos;%d+&apos;, 4)) --23
+</code></pre><h3 id="string-rep">string.rep</h3>
+<pre><code>-- string.rep (s, n [, sep])
+-- s &#x4EE5; sep &#x8FDE;&#x63A5;&#xFF0C;&#x91CD;&#x590D;n&#x6B21;
+print(string.rep(&apos;abc&apos;, 3, &apos;-&apos;)) -- &apos;abc-abc-abc&apos;
+</code></pre><h3 id="string-reverse">string.reverse</h3>
+<pre><code>-- string.reverse(s)
+print(string.reverse(&apos;hello world&apos;))
+-- dlrow olleh
+</code></pre><h3 id="string-sub">string.sub</h3>
+<pre><code>-- string.sub (s, i [, j])
+</code></pre><p><strong>%b()</strong></p>
+<pre><code>print(string.gsub(&quot;a (enclosed (in) parentheses) line&quot;, &quot;%b()&quot;, &quot;&quot;))
+-- a line
+</code></pre><p>&#x5E38;&#x7528;&#x7684;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x6709;&#xFF1A;<code>%b()</code> &#xFF0C;<code>%b[]</code>&#xFF0C;<code>%b%{%}</code> &#x548C; <code>%b&lt;&gt;</code>&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x5B57;&#x7B26;&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;</p>
 
                     
                     </section>
@@ -1294,10 +1346,10 @@ $var =&amp; $GLOBALS[&quot;var&quot;];
         </div>
 
         
-        <a href="../../../Language/PHP/Optimization/Optimization.html" class="navigation navigation-prev " aria-label="Previous page: Optimization"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../Language/Lua/LuaString/LuaRegularExpression.html" class="navigation navigation-prev " aria-label="Previous page: Lua RegularExpression"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../Language/PHP/Ob/ob.html" class="navigation navigation-next " aria-label="Next page: Ob"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../Language/Shell/shell.html" class="navigation navigation-next " aria-label="Next page: Shell"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
