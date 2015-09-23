@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.1" data-basepath="../.." data-revision="Mon Sep 14 2015 19:14:17 GMT+0800 (CST)">
+    <div class="book" data-level="3.1" data-basepath="../.." data-revision="Wed Sep 23 2015 19:37:23 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1356,7 +1356,7 @@ return msg
 local link_id = redis.call(&quot;INCR&quot;, KEYS[1])
 redis.call(&quot;HSET&quot;,KEYS[2],link_id,ARGV[1])
 </code></pre><p>&#x6267;&#x884C;Redis Lua&#x811A;&#x672C;</p>
-<p><code>redis-cli EVAL &quot;$(cat luascript_path)&#x201D;&quot;0</code></p>
+<p><code>redis-cli EVAL &quot;$(cat luascript_path)&quot;0</code></p>
 <h2 id="php-%E6%93%8D%E4%BD%9Credis">PHP &#x64CD;&#x4F5C;redis</h2>
 <p><a href="Redis.php">php_redis</a></p>
 
