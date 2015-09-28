@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.7" data-basepath=".." data-revision="Thu Sep 24 2015 19:23:06 GMT+0800 (CST)">
+    <div class="book" data-level="2.7" data-basepath=".." data-revision="Mon Sep 28 2015 11:42:10 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -846,13 +846,28 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="DevOps/CDN.html">
+        <li class="chapter " data-level="5.5" data-path="DevOps/savememoryandCPU.html">
+            
+                
+                    <a href="../DevOps/savememoryandCPU.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        节约系统内存和CPU
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="DevOps/CDN.html">
             
                 
                     <a href="../DevOps/CDN.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>5.5.</b>
+                            <b>5.6.</b>
                         
                         CDN
                     </a>
@@ -861,13 +876,13 @@
             
         </li>
     
-        <li class="chapter " data-level="5.6" data-path="DevOps/ssh.html">
+        <li class="chapter " data-level="5.7" data-path="DevOps/ssh.html">
             
                 
                     <a href="../DevOps/ssh.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>5.6.</b>
+                            <b>5.7.</b>
                         
                         SSH
                     </a>
@@ -876,13 +891,13 @@
             
         </li>
     
-        <li class="chapter " data-level="5.7" data-path="DevOps/ssl.html">
+        <li class="chapter " data-level="5.8" data-path="DevOps/ssl.html">
             
                 
                     <a href="../DevOps/ssl.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>5.7.</b>
+                            <b>5.8.</b>
                         
                         SSL
                     </a>
@@ -891,13 +906,13 @@
             
         </li>
     
-        <li class="chapter " data-level="5.8" data-path="DevOps/UML.html">
+        <li class="chapter " data-level="5.9" data-path="DevOps/UML.html">
             
                 
                     <a href="../DevOps/UML.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>5.8.</b>
+                            <b>5.9.</b>
                         
                         UML
                     </a>
@@ -1266,8 +1281,10 @@
                     <section class="normal" id="section-">
                     
                         <h2 id="sprinf-%E5%87%BD%E6%95%B0">sprinf &#x51FD;&#x6570;</h2>
-<pre><code>-- 1. &#x683C;&#x5F0F;&#x5316;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x4E32;
--- string.format (formatstring, &#xB7;&#xB7;&#xB7;)
+<ol>
+<li>&#x683C;&#x5F0F;&#x5316;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x4E32;</li>
+</ol>
+<pre><code>-- string.format (formatstring, &#xB7;&#xB7;&#xB7;)
 -- &#x628A;&#x6574;&#x6570;123&#x6253;&#x5370;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;
 print(string.format(&apos;%d&apos;, 123)) -- &#x4EA7;&#x751F;&#x201C;123&#x2033;
 -- &#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8DB3;&#x7684;&#x5DE6;&#x8FB9;&#x8865;&#x7A7A;&#x683C;
@@ -1278,23 +1295,26 @@ print(string.format(&apos;%-8d%8d&apos;, 123, 123)) --123          123
 print(string.format(&apos;%x&apos;, 123)) -- 7b
 -- 16&#x8FDB;&#x5236;&#xFF0C;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8DB3;&#x8865;0
 print(string.format(&apos;%08x&apos;, 123)) -- 0000007b
-
--- 2. &#x63A7;&#x5236;&#x6D6E;&#x70B9;&#x6570;&#x6253;&#x5370;&#x683C;&#x5F0F;
--- &#x6D6E;&#x70B9;&#x6570;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x7B26;&apos;%f&apos;&#x63A7;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E;6&#x4F4D;
+</code></pre><ol>
+<li>&#x63A7;&#x5236;&#x6D6E;&#x70B9;&#x6570;&#x6253;&#x5370;&#x683C;&#x5F0F;</li>
+</ol>
+<pre><code>-- &#x6D6E;&#x70B9;&#x6570;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x7B26;&apos;%f&apos;&#x63A7;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E;6&#x4F4D;
 print(string.format(&apos;%f&apos;, 3.1415926)) -- 3.141593
 -- &#x63A7;&#x5236;&#x6253;&#x5370;&#x5BBD;&#x5EA6;&#x548C;&#x5C0F;&#x6570;&#x4F4D;&#x6570; &apos;%m.nf&apos; m &#x6253;&#x5370;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;n &#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4F4D;&#x6570;
 print(string.format(&apos;%-10.3f%d&apos;, 3.1415926, 123)) -- 3.142     123
-
--- 3. &#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;
--- n&#x4ECE;&#x7B26;&#x4E32;&#x4E2D;&#x622A;&#x53D6;&#x5B57;&#x7B26;
+</code></pre><ol>
+<li>&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</li>
+</ol>
+<pre><code>-- n&#x4ECE;&#x7B26;&#x4E32;&#x4E2D;&#x622A;&#x53D6;&#x5B57;&#x7B26;
 local i = &apos;abc&apos;
 print(string.format(&apos;%.2s&apos;, i))
 -- &apos;*&apos;&#x6765;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x672C;&#x6765;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#x6216;&#x7CBE;&#x5EA6;&#x7684;&#x5E38;&#x6570;&#x6570;&#x5B57;&#x7684;&#x4F4D;&#x7F6E;
 -- sprintf(s, &#x201C;%.*s%.*s&#x201D;, 7, a1, 7, a2); lua&#x4E0D;&#x652F;&#x6301;
 print(string.format(&apos;%#x&apos;, 123)) -- &apos;#&apos;&#x4EA7;&#x751F;0X
-
--- 4. &#x6253;&#x5370;&#x5730;&#x5740;&#x4FE1;&#x606F;
--- &#x5730;&#x5740;&#x6216;&#x8005;&#x6307;&#x9488;&#x662F;32&#x4F4D;&#x7684;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x7684;&apos;%u&apos;&#x6253;&#x5370;
+</code></pre><ol>
+<li>&#x6253;&#x5370;&#x5730;&#x5740;&#x4FE1;&#x606F;</li>
+</ol>
+<pre><code>-- &#x5730;&#x5740;&#x6216;&#x8005;&#x6307;&#x9488;&#x662F;32&#x4F4D;&#x7684;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x7684;&apos;%u&apos;&#x6253;&#x5370;
 -- sprintf(s, &#x201C;%u&#x201D;, &amp;i);
 </code></pre>
                     
