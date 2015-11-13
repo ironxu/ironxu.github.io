@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4.2.2" data-basepath="../.." data-revision="Wed Nov 11 2015 19:50:32 GMT+0800 (CST)">
+    <div class="book" data-level="4.2.2" data-basepath="../.." data-revision="Fri Nov 13 2015 19:28:47 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1285,6 +1285,21 @@
             
         </li>
     
+        <li class="chapter " data-level="6.11" data-path="DevEnv/iftop.html">
+            
+                
+                    <a href="../../DevEnv/iftop.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.11.</b>
+                        
+                        流量监控
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1545,7 +1560,27 @@ function bubblesort($arr)
     return $arr;
 }
 </code></pre><h2 id="%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F">&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</h2>
-<h2 id="%E5%A0%86%E6%8E%92%E5%BA%8F">&#x5806;&#x6392;&#x5E8F;</h2>
+<pre><code>// &#x5E0C;&#x5C14;&#x6392;&#x5E8F;
+function shellsort($arr)
+{
+    $increment = count($arr);
+    do {
+        $increment = floor($increment / 3 + 1);
+        for ($i = $increment; $i &lt; count($arr); $i++) {
+            if ($arr[$i] &lt; $arr[$i - $increment]) {
+                $key = $arr[$i];
+                for ($j = $i - $increment ; $j &gt;= 0 &amp;&amp; $key &lt; $arr[$j]; $j -= $increment) { 
+                    $arr[$j + $increment] = $arr[$j];
+                }
+                $arr[$j + $increment] = $key;
+            }
+        }
+    } while ($increment &gt; 1);
+    return $arr;
+}
+
+print_r(shellsort($arr));
+</code></pre><h2 id="%E5%A0%86%E6%8E%92%E5%BA%8F">&#x5806;&#x6392;&#x5E8F;</h2>
 <h3 id="%E8%8A%82%E7%82%B9%E4%B8%8B%E6%A0%87">&#x8282;&#x70B9;&#x4E0B;&#x6807;</h3>
 <p>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x4E0B;&#x6807;i &#x7684;&#x7236;&#x8282;&#x70B9;&#x548C;&#x5DE6;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x4E0B;&#x6807;</p>
 <pre><code>PARENT (i)
@@ -1607,10 +1642,6 @@ RIGHT (i)
 
         
 <script src="../../gitbook/app.js"></script>
-
-    
-    <script src="../../gitbook/plugins/gitbook-plugin-collapsible-menu/plugin.js"></script>
-    
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-gtoc/gtoc.js"></script>
